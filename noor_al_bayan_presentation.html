@@ -186,17 +186,71 @@
             background: linear-gradient(135deg, #1c6b4c 0%, #045d3f 100%);
         }
         .nav-btn:disabled {
-            opacity: 0.4;
+            opacity: 0.3;
             cursor: not-allowed;
             transform: scale(1);
+            box-shadow: none;
         }
         .nav-btn svg {
             width: 28px;
             height: 28px;
         }
+        .slide-nav-container {
+            position: fixed;
+            bottom: 30px;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            z-index: 1000;
+            pointer-events: none;
+        }
+        .slide-nav-container > * {
+            pointer-events: auto;
+        }
+        /* Slide indicators */
+        .slide-indicators {
+            position: fixed;
+            bottom: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px;
+            z-index: 999;
+        }
+        .indicator {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: rgba(4, 93, 63, 0.3);
+            transition: all 0.3s ease;
+        }
+        .indicator.active {
+            background-color: #045d3f;
+            width: 24px;
+            border-radius: 4px;
+        }
     </style>
 </head>
 <body class="bg-surface text-on-surface font-body-md antialiased overflow-x-hidden">
+
+<!-- أزرار التنقل الثابتة -->
+<div class="slide-nav-container">
+    <button id="prevBtn" onclick="prevSlide()" class="nav-btn" title="السابق">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M16.62 2.99a1 1 0 0 1 1.42 1.42L6.45 16l11.59 11.59a1 1 0 0 1-1.42 1.42L4 16.41V2.99z"/>
+        </svg>
+    </button>
+    <button id="nextBtn" onclick="nextSlide()" class="nav-btn" title="التالي">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M7.38 2.99a1 1 0 0 0-1.42 1.42L17.55 16 5.96 27.59a1 1 0 0 0 1.42 1.42L20 16.41V2.99z"/>
+        </svg>
+    </button>
+</div>
+
+<!-- مؤشرات الشرائح -->
+<div class="slide-indicators" id="slideIndicators"></div>
 
 <!-- شريحة 1: الترحيب -->
 <div id="slide1" class="slide active min-h-screen flex items-center justify-center px-margin-mobile md:px-margin-desktop py-12 fade-in">
@@ -604,12 +658,6 @@
             <div class="bg-surface-container p-4 rounded-lg border border-secondary/10 font-display-lg text-headline-sm text-center hidden md:block">رَسَمَ</div>
         </div>
     </div>
-
-    <div class="mt-16 flex justify-center gap-4">
-        <button onclick="prevSlide()" class="flex items-center gap-2 px-6 py-3 border-2 border-secondary text-secondary rounded-full font-label-md hover:bg-surface-container transition-colors">
-            <span class="material-symbols-outlined">arrow_back</span> السابق
-        </button>
-    </div>
 </div>
 
 <script>
@@ -668,7 +716,25 @@
         const nextBtn = document.getElementById('nextBtn');
         if (prevBtn) prevBtn.disabled = currentSlide === 1;
         if (nextBtn) nextBtn.disabled = currentSlide === totalSlides;
+        
+        // Update slide indicators
+        const indicatorsContainer = document.getElementById('slideIndicators');
+        indicatorsContainer.innerHTML = '';
+        for (let i = 1; i <= totalSlides; i++) {
+            const indicator = document.createElement('div');
+            indicator.className = 'indicator' + (i === currentSlide ? ' active' : '');
+            indicatorsContainer.appendChild(indicator);
+        }
     }
+
+    // Keyboard navigation
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'ArrowLeft') {
+            nextSlide();
+        } else if (e.key === 'ArrowRight') {
+            prevSlide();
+        }
+    });
 </script>
 <script>
     // تحفة الأطفال - Chapters and Verses
