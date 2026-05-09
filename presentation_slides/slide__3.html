@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>مشروع وداعاً للتلقين - حالات الحروف العشرين</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&amp;family=Aref+Ruqaa:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-container": "#c6c4bc",
+                        "primary-container": "#045d3f",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-container": "#785a1a",
+                        "tertiary-fixed-dim": "#c9c6bf",
+                        "on-secondary-fixed-variant": "#5d4201",
+                        "outline": "#6f7972",
+                        "primary": "#00432c",
+                        "surface-tint": "#1c6b4c",
+                        "surface-dim": "#e1d8d4",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-primary": "#8bd6b0",
+                        "tertiary-fixed": "#e5e2db",
+                        "on-primary-fixed": "#002114",
+                        "surface-container": "#f5ece7",
+                        "tertiary-container": "#52514b",
+                        "on-tertiary-fixed": "#1c1c17",
+                        "on-primary": "#ffffff",
+                        "on-background": "#1e1b18",
+                        "outline-variant": "#bfc9c1",
+                        "background": "#fff8f5",
+                        "surface-bright": "#fff8f5",
+                        "inverse-on-surface": "#f8efea",
+                        "on-secondary-fixed": "#261900",
+                        "on-primary-fixed-variant": "#005236",
+                        "tertiary": "#3a3a35",
+                        "secondary": "#775a19",
+                        "on-surface-variant": "#3f4943",
+                        "primary-fixed": "#a6f3cb",
+                        "secondary-fixed-dim": "#e9c176",
+                        "on-error": "#ffffff",
+                        "secondary-fixed": "#ffdea5",
+                        "on-secondary": "#ffffff",
+                        "inverse-surface": "#34302c",
+                        "on-primary-container": "#89d4ad",
+                        "surface-container-highest": "#e9e1dc",
+                        "error-container": "#ffdad6",
+                        "on-surface": "#1e1b18",
+                        "on-error-container": "#93000a",
+                        "surface-variant": "#e9e1dc",
+                        "on-tertiary-fixed-variant": "#474741",
+                        "surface-container-low": "#fbf2ed",
+                        "surface": "#fff8f5",
+                        "primary-fixed-dim": "#8bd6b0",
+                        "secondary-container": "#fed488",
+                        "error": "#ba1a1a",
+                        "surface-container-high": "#efe6e2"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "gutter": "24px",
+                        "margin-desktop": "64px",
+                        "max-width": "1200px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["EB Garamond", "Amiri", "serif"],
+                        "body-lg": ["Source Sans 3", "sans-serif"],
+                        "display-lg-mobile": ["EB Garamond", "Amiri", "serif"],
+                        "headline-md": ["EB Garamond", "Amiri", "serif"],
+                        "body-md": ["Source Sans 3", "sans-serif"],
+                        "headline-sm": ["EB Garamond", "Amiri", "serif"],
+                        "label-md": ["Source Sans 3", "sans-serif"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "display-lg-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+                        "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-sm": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        /* Decorative Arabesque Corner - CSS Only */
+        .arabesque-corner::after {
+            content: "";
+            position: absolute;
+            bottom: 4px;
+            left: 4px;
+            width: 32px;
+            height: 32px;
+            background-image: radial-gradient(circle at 100% 100%, transparent 20px, var(--tw-colors-secondary) 21px, transparent 22px),
+                              radial-gradient(circle at 0% 100%, transparent 20px, var(--tw-colors-secondary) 21px, transparent 22px);
+            opacity: 0.1;
+            pointer-events: none;
+        }
+        /* Custom font override for the prominent Arabic letters to ensure beautiful script rendering if system allows */
+        .arabic-script {
+            font-family: 'Aref Ruqaa', 'Amiri', serif;
+            line-height: 1.2;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen flex flex-col md:flex-row antialiased">
+<!-- TopNavBar (Mobile) -->
+<header class="md:hidden border-b border-secondary/30 bg-surface shadow-sm shadow-primary/10 fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile h-16" dir="ltr">
+<div class="flex items-center gap-4">
+<button class="text-primary hover:bg-secondary-container/20 transition-colors duration-300 p-2 rounded-full">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<h1 class="font-display-lg text-headline-md font-bold text-primary">Noor Al-Bayan</h1>
+</div>
+<div class="flex items-center gap-2">
+<button class="text-primary hover:bg-secondary-container/20 transition-colors duration-300 p-2 rounded-full">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+</header>
+<!-- SideNavBar (Desktop) -->
+<nav class="hidden lg:flex flex-col h-screen fixed right-0 top-0 pt-20 pb-8 z-40 bg-surface-container border-l border-secondary/20 shadow-xl shadow-primary/5 docked h-screen w-80" dir="ltr">
+<div class="px-6 mb-8 text-center">
+<div class="w-20 h-20 mx-auto mb-4 bg-secondary-container/30 rounded-full flex items-center justify-center border-2 border-secondary/40">
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<h2 class="font-display-lg text-headline-sm text-primary">Noor Al-Bayan</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Eloquence and Light</p>
+</div>
+<div class="flex-1 overflow-y-auto space-y-2 px-2">
+<!-- Active Tab: Farewell to Rote Learning -->
+<a class="flex items-center gap-4 bg-primary-container text-on-primary-container rounded-full px-4 py-3 mx-2 translate-x-1 transition-transform duration-300 shadow-sm shadow-primary/10" href="#">
+<span class="material-symbols-outlined" data-icon="auto_stories" data-weight="fill">auto_stories</span>
+<span class="font-body-md text-body-md font-semibold">Farewell to Rote Learning</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface-variant hover:bg-secondary-container/30 rounded-full px-4 py-3 mx-2 hover:bg-secondary-container/40 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="auto_awesome">auto_awesome</span>
+<span class="font-body-md text-body-md">Qur'anic Excellence</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface-variant hover:bg-secondary-container/30 rounded-full px-4 py-3 mx-2 hover:bg-secondary-container/40 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span class="font-body-md text-body-md">Noor Al-Bayan Books</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface-variant hover:bg-secondary-container/30 rounded-full px-4 py-3 mx-2 hover:bg-secondary-container/40 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="translate">translate</span>
+<span class="font-body-md text-body-md">Language of Paradise</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface-variant hover:bg-secondary-container/30 rounded-full px-4 py-3 mx-2 hover:bg-secondary-container/40 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="quiz">quiz</span>
+<span class="font-body-md text-body-md">Word Challenge</span>
+</a>
+</div>
+<div class="px-6 mt-8">
+<button class="w-full bg-primary text-on-primary py-3 rounded-full font-label-md text-label-md hover:bg-primary-fixed-variant transition-colors shadow-sm shadow-primary/20">
+                Start Daily Lesson
+            </button>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-1 w-full max-w-max-width mx-auto p-margin-mobile md:p-margin-desktop mt-16 lg:mt-0 lg:pr-80">
+<!-- Header Section -->
+<header class="mb-12 text-center md:text-right relative">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-surface-tint/10 rounded-full mb-4">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="auto_stories">auto_stories</span>
+<span class="font-label-md text-label-md text-primary">مشروع وداعاً للتلقين</span>
+</div>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-4">حالات الحروف العشرين</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                دراسة تطبيقية على حرف <strong class="text-secondary font-bold">الباء (ب)</strong> لتوضيح الحالات العشرين التي يمر بها الحرف العربي من حيث الحركات، السكون، التنوين، المدود، والشدة.
+            </p>
+<!-- Golden Rule Divider -->
+<div class="flex items-center justify-center md:justify-start mt-8">
+<div class="h-px bg-secondary/30 w-16"></div>
+<div class="mx-4 text-secondary rotate-45 transform w-2 h-2 bg-secondary/20 border border-secondary/50"></div>
+<div class="h-px bg-secondary/30 w-64"></div>
+</div>
+</header>
+<!-- The 20 States Grid (Bento Style) -->
+<section class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-unit flex-wrap">
+<!-- Card 1: Fatha -->
+<article class="bg-surface-container-lowest border border-secondary/30 rounded-xl p-6 flex flex-col items-center justify-center relative shadow-sm shadow-primary/5 hover:-translate-y-1 hover:shadow-md hover:shadow-primary/10 transition-all duration-300 arabesque-corner group">
+<div class="text-[56px] arabic-script text-primary group-hover:text-surface-tint transition-colors mb-2">بَ</div>
+<div class="font-label-md text-label-md text-on-surface-variant bg-surface-container px-3 py-1 rounded-full border border-secondary/10">الفتحة</div>
+</article>
+<!-- Card 2: Kasra -->
+<article class="bg-surface-container-lowest border border-secondary/30 rounded-xl p-6 flex flex-col items-center justify-center relative shadow-sm shadow-primary/5 hover:-translate-y-1 hover:shadow-md hover:shadow-primary/10 transition-all duration-300 arabesque-corner group">
+<div class="text-[56px] arabic-script text-primary group-hover:text-surface-tint transition-colors mb-2">بِ</div>
+<div class="font-label-md text-label-md text-on-surface-variant bg-surface-container px-3 py-1 rounded-full border border-secondary/10">الكسرة</div>
+</article>
+<!-- Card 3: Damma -->
+<article class="bg-surface-container-lowest border border-secondary/30 rounded-xl p-6 flex flex-col items-center justify-center relative shadow-sm shadow-primary/5 hover:-translate-y-1 hover:shadow-md hover:shadow-primary/10 transition-all duration-300 arabesque-corner group">
+<div class="text-[56px] arabic-script text-primary group-hover:text-surface-tint transition-colors mb-2">بُ</div>
+<div class="font-label-md text-label-md text-on-surface-variant bg-surface-container px-3 py-1 rounded-full border border-secondary/10">الضمة</div>
+</article>
+<!-- Card 4: Sukun -->
+<article class="bg-surface-container-lowest border border-secondary/30 rounded-xl p-6 flex flex-col items-center justify-center relative shadow-sm shadow-primary/5 hover:-translate-y-1 hover:shadow-md hover:shadow-primary/10 transition-all duration-300 arabesque-corner group">
+<div class="text-[56px] arabic-script text-primary group-hover:text-surface-tint transition-colors mb-2">بْ</div>
+<div class="font-label-md text-label-md text-on-surface-variant bg-surface-container px-3 py-1 rounded-full border border-secondary/10">السكون</div>
+</article>
+<!-- Card 5: Tanween Fath -->
+<article class="bg-surface-container-lowest border border-secondary/30 rounded-xl p-6 flex flex-col items-center justify-center relative shadow-sm shadow-primary/5 hover:-translate-y-1 hover:shadow-md hover:shadow-primary/10 transition-all duration-300 arabesque-corner group">
+<div class="text-[56px] arabic-script text-primary group-hover:text-surface-tint transition-colors mb-2">بًا</div>
+<div class="font-label-md text-label-md text-on-surface-variant bg-surface-container px-3 py-1 rounded-full border border-secondary/10 text-center leading-tight">تنوين<br/>بالفتح</div>
+</article>
+<!-- Card 6: Tanween Kasr -->
+<article class="bg-surface-container-lowest border border-secondary/30 rounded-xl p-6 flex flex-col items-center justify-center relative shadow-sm shadow-primary/5 hover:-translate-y-1 hover:shadow-md hover:shadow-primary/10 transition-all duration-300 arabesque-corner group">
+<div class="text-[56px] arabic-script text-primary group-hover:text-surface-tint transition-colors mb-2">بٍ</div>
+<div class="font-label-md text-label-md text-on-surface-variant bg-surface-container px-3 py-1 rounded-full border border-secondary/10 text-center leading-tight">تنوين<br/>بالكسر</div>
+</article>
+<!-- Card 7: Tanween Damm -->
+<article class="bg-surface-container-lowest border border-secondary/30 rounded-xl p-6 flex flex-col items-center justify-center relative shadow-sm shadow-primary/5 hover:-translate-y-1 hover:shadow-md hover:shadow-primary/10 transition-all duration-300 arabesque-corner group">
+<div class="text-[56px] arabic-script text-primary group-hover:text-surface-tint transition-colors mb-2">بٌ</div>
+<div class="font-label-md text-label-md text-on-surface-variant bg-surface-container px-3 py-1 rounded-full border border-secondary/10 text-center leading-tight">تنوين<br/>بالضم</div>
+</article>
+<!-- Card 8: Madd Alif -->
+<article class="bg-surface-container-lowest border border-secondary/30 rounded-xl p-6 flex flex-col items-center justify-center relative shadow-sm shadow-primary/5 hover:-translate-y-1 hover:shadow-md hover:shadow-primary/10 transition-all duration-300 arabesque-corner group">
+<div class="text-[56px] arabic-script text-primary group-hover:text-surface-tint transition-colors mb-2">بَا</div>
+<div class="font-label-md text-label-md text-on-surface-variant bg-surface-container px-3 py-1 rounded-full border border-secondary/10 text-center leading-tight">مد<br/>بالألف</div>
+</article>
+<!-- Card 9: Madd Yaa -->
+<article class="bg-surface-container-lowest border border-secondary/30 rounded-xl p-6 flex flex-col items-center justify-center relative shadow-sm shadow-primary/5 hover:-translate-y-1 hover:shadow-md hover:shadow-primary/10 transition-all duration-300 arabesque-corner group">
+<div class="text-[56px] arabic-script text-primary group-hover:text-surface-tint transition-colors mb-2">بِي</div>
+<div class="font-label-md text-label-md text-on-surface-variant bg-surface-container px-3 py-1 rounded-full border border-secondary/10 text-center leading-tight">مد<br/>بالياء</div>
+</article>
+<!-- Card 10: Madd Waw -->
+<article class="bg-surface-container-lowest border border-secondary/30 rounded-xl p-6 flex flex-col items-center justify-center relative shadow-sm shadow-primary/5 hover:-translate-y-1 hover:shadow-md hover:shadow-primary/10 transition-all duration-300 arabesque-corner group">
+<div class="text-[56px] arabic-script text-primary group-hover:text-surface-tint transition-colors mb-2">بُو</div>
+<div class="font-label-md text-label-md text-on-surface-variant bg-surface-container px-3 py-1 rounded-full border border-secondary/10 text-center leading-tight">مد<br/>بالواو</div>
+</article>
+<!-- Card 11: Shadda -->
+<article class="bg-surface-container-lowest border border-secondary/30 rounded-xl p-6 flex flex-col items-center justify-center relative shadow-sm shadow-primary/5 hover:-translate-y-1 hover:shadow-md hover:shadow-primary/10 transition-all duration-300 arabesque-corner group md:col-span-2 lg:col-span-1 bg-gradient-to-br from-surface-container-lowest to-surface-container-low">
+<div class="text-[56px] arabic-script text-secondary group-hover:text-on-secondary-container transition-colors mb-2">بّ</div>
+<div class="font-label-md text-label-md text-on-surface-variant bg-surface-container px-3 py-1 rounded-full border border-secondary/20">الشدة المفرده</div>
+</article>
+<!-- Card 12: Shadda Fatha -->
+<article class="bg-surface-container-lowest border border-secondary/30 rounded-xl p-6 flex flex-col items-center justify-center relative shadow-sm shadow-primary/5 hover:-translate-y-1 hover:shadow-md hover:shadow-primary/10 transition-all duration-300 arabesque-corner group">
+<div class="text-[56px] arabic-script text-primary group-hover:text-surface-tint transition-colors mb-2">بَّ</div>
+<div class="font-label-md text-label-md text-on-surface-variant bg-surface-container px-3 py-1 rounded-full border border-secondary/10 text-center leading-tight">شدة<br/>وفتحة</div>
+</article>
+<!-- Card 13: Shadda Kasra -->
+<article class="bg-surface-container-lowest border border-secondary/30 rounded-xl p-6 flex flex-col items-center justify-center relative shadow-sm shadow-primary/5 hover:-translate-y-1 hover:shadow-md hover:shadow-primary/10 transition-all duration-300 arabesque-corner group">
+<div class="text-[56px] arabic-script text-primary group-hover:text-surface-tint transition-colors mb-2">بِّ</div>
+<div class="font-label-md text-label-md text-on-surface-variant bg-surface-container px-3 py-1 rounded-full border border-secondary/10 text-center leading-tight">شدة<br/>وكسرة</div>
+</article>
+<!-- Card 14: Shadda Damma -->
+<article class="bg-surface-container-lowest border border-secondary/30 rounded-xl p-6 flex flex-col items-center justify-center relative shadow-sm shadow-primary/5 hover:-translate-y-1 hover:shadow-md hover:shadow-primary/10 transition-all duration-300 arabesque-corner group">
+<div class="text-[56px] arabic-script text-primary group-hover:text-surface-tint transition-colors mb-2">بُّ</div>
+<div class="font-label-md text-label-md text-on-surface-variant bg-surface-container px-3 py-1 rounded-full border border-secondary/10 text-center leading-tight">شدة<br/>وضمة</div>
+</article>
+<!-- Card 15: Shadda Tanween Fath -->
+<article class="bg-surface-container-lowest border border-secondary/30 rounded-xl p-6 flex flex-col items-center justify-center relative shadow-sm shadow-primary/5 hover:-translate-y-1 hover:shadow-md hover:shadow-primary/10 transition-all duration-300 arabesque-corner group">
+<div class="text-[56px] arabic-script text-primary group-hover:text-surface-tint transition-colors mb-2">بًّا</div>
+<div class="font-label-md text-label-md text-on-surface-variant bg-surface-container px-3 py-1 rounded-full border border-secondary/10 text-center leading-tight text-xs">شدة وتنوين<br/>بالفتح</div>
+</article>
+<!-- Card 16: Shadda Tanween Kasr -->
+<article class="bg-surface-container-lowest border border-secondary/30 rounded-xl p-6 flex flex-col items-center justify-center relative shadow-sm shadow-primary/5 hover:-translate-y-1 hover:shadow-md hover:shadow-primary/10 transition-all duration-300 arabesque-corner group">
+<div class="text-[56px] arabic-script text-primary group-hover:text-surface-tint transition-colors mb-2">بٍّ</div>
+<div class="font-label-md text-label-md text-on-surface-variant bg-surface-container px-3 py-1 rounded-full border border-secondary/10 text-center leading-tight text-xs">شدة وتنوين<br/>بالكسر</div>
+</article>
+<!-- Card 17: Shadda Tanween Damm -->
+<article class="bg-surface-container-lowest border border-secondary/30 rounded-xl p-6 flex flex-col items-center justify-center relative shadow-sm shadow-primary/5 hover:-translate-y-1 hover:shadow-md hover:shadow-primary/10 transition-all duration-300 arabesque-corner group">
+<div class="text-[56px] arabic-script text-primary group-hover:text-surface-tint transition-colors mb-2">بٌّ</div>
+<div class="font-label-md text-label-md text-on-surface-variant bg-surface-container px-3 py-1 rounded-full border border-secondary/10 text-center leading-tight text-xs">شدة وتنوين<br/>بالضم</div>
+</article>
+<!-- Card 18: Shadda Fatha Madd -->
+<article class="bg-surface-container-lowest border border-secondary/30 rounded-xl p-6 flex flex-col items-center justify-center relative shadow-sm shadow-primary/5 hover:-translate-y-1 hover:shadow-md hover:shadow-primary/10 transition-all duration-300 arabesque-corner group">
+<div class="text-[56px] arabic-script text-primary group-hover:text-surface-tint transition-colors mb-2">بَّا</div>
+<div class="font-label-md text-label-md text-on-surface-variant bg-surface-container px-3 py-1 rounded-full border border-secondary/10 text-center leading-tight text-xs">شدة وفتحة<br/>مع المد</div>
+</article>
+<!-- Card 19: Shadda Kasra Madd -->
+<article class="bg-surface-container-lowest border border-secondary/30 rounded-xl p-6 flex flex-col items-center justify-center relative shadow-sm shadow-primary/5 hover:-translate-y-1 hover:shadow-md hover:shadow-primary/10 transition-all duration-300 arabesque-corner group">
+<div class="text-[56px] arabic-script text-primary group-hover:text-surface-tint transition-colors mb-2">بِّي</div>
+<div class="font-label-md text-label-md text-on-surface-variant bg-surface-container px-3 py-1 rounded-full border border-secondary/10 text-center leading-tight text-xs">شدة وكسرة<br/>مع المد</div>
+</article>
+<!-- Card 20: Shadda Damma Madd -->
+<article class="bg-surface-container-lowest border border-secondary/30 rounded-xl p-6 flex flex-col items-center justify-center relative shadow-sm shadow-primary/5 hover:-translate-y-1 hover:shadow-md hover:shadow-primary/10 transition-all duration-300 arabesque-corner group">
+<div class="text-[56px] arabic-script text-primary group-hover:text-surface-tint transition-colors mb-2">بُّو</div>
+<div class="font-label-md text-label-md text-on-surface-variant bg-surface-container px-3 py-1 rounded-full border border-secondary/10 text-center leading-tight text-xs">شدة وضمة<br/>مع المد</div>
+</article>
+</section>
+<!-- Navigation Footer -->
+<footer class="mt-20 pt-8 border-t border-secondary/20 flex flex-col sm:flex-row items-center justify-between gap-6 pb-20 lg:pb-8">
+<div class="flex-1">
+<!-- Golden Thread Progress -->
+<div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden mb-2">
+<div class="bg-secondary h-full w-1/4 rounded-full"></div>
+</div>
+<p class="font-label-md text-label-md text-on-surface-variant text-sm">مستوى التقدم: الأساسيات</p>
+</div>
+<a class="group flex items-center gap-4 bg-primary hover:bg-surface-tint text-on-primary px-8 py-4 rounded-full shadow-md shadow-primary/20 transition-all duration-300 border border-primary-container" href="#basmalah">
+<span class="font-headline-sm text-headline-sm">الدرس التالي: البسملة</span>
+<span class="material-symbols-outlined transform group-hover:-translate-x-2 transition-transform rtl:rotate-180" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</footer>
+</main>
+</body></html>
