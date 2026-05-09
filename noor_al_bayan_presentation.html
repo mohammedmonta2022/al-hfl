@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>نور البيان - عرض تقديمي شامل</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&amp;family=Aref+Ruqaa:wght@400;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri+Quran&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600;700&amp;family=Source+Sans+3:wght@400;600&amp;display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-container": "#c6c4bc",
+                        "primary-container": "#045d3f",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-container": "#785a1a",
+                        "tertiary-fixed-dim": "#c9c6bf",
+                        "on-secondary-fixed-variant": "#5d4201",
+                        "outline": "#6f7972",
+                        "primary": "#00432c",
+                        "surface-tint": "#1c6b4c",
+                        "surface-dim": "#e1d8d4",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-primary": "#8bd6b0",
+                        "tertiary-fixed": "#e5e2db",
+                        "on-primary-fixed": "#002114",
+                        "surface-container": "#f5ece7",
+                        "tertiary-container": "#52514b",
+                        "on-tertiary-fixed": "#1c1c17",
+                        "on-primary": "#ffffff",
+                        "on-background": "#1e1b18",
+                        "outline-variant": "#bfc9c1",
+                        "background": "#fff8f5",
+                        "surface-bright": "#fff8f5",
+                        "inverse-on-surface": "#f8efea",
+                        "on-secondary-fixed": "#261900",
+                        "on-primary-fixed-variant": "#005236",
+                        "tertiary": "#3a3a35",
+                        "secondary": "#775a19",
+                        "on-surface-variant": "#3f4943",
+                        "primary-fixed": "#a6f3cb",
+                        "secondary-fixed-dim": "#e9c176",
+                        "on-error": "#ffffff",
+                        "secondary-fixed": "#ffdea5",
+                        "on-secondary": "#ffffff",
+                        "inverse-surface": "#34302c",
+                        "on-primary-container": "#89d4ad",
+                        "surface-container-highest": "#e9e1dc",
+                        "error-container": "#ffdad6",
+                        "on-surface": "#1e1b18",
+                        "on-error-container": "#93000a",
+                        "surface-variant": "#e9e1dc",
+                        "on-tertiary-fixed-variant": "#474741",
+                        "surface-container-low": "#fbf2ed",
+                        "surface": "#fff8f5",
+                        "primary-fixed-dim": "#8bd6b0",
+                        "secondary-container": "#fed488",
+                        "error": "#ba1a1a",
+                        "surface-container-high": "#efe6e2"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "gutter": "24px",
+                        "margin-desktop": "64px",
+                        "max-width": "1200px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["EB Garamond", "Amiri", "serif"],
+                        "body-lg": ["Source Sans 3", "sans-serif"],
+                        "display-lg-mobile": ["EB Garamond", "Amiri", "serif"],
+                        "headline-md": ["EB Garamond", "Amiri", "serif"],
+                        "body-md": ["Source Sans 3", "sans-serif"],
+                        "headline-sm": ["EB Garamond", "Amiri", "serif"],
+                        "label-md": ["Source Sans 3", "sans-serif"],
+                        "arabic": ["Amiri", "serif"],
+                        "quran": ["Amiri Quran", "serif"],
+                        "arabic-script": ["Aref Ruqaa", "Amiri", "serif"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "display-lg-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+                        "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-sm": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .arabic-text { font-family: 'Amiri', serif; line-height: 2.2; }
+        .arabic-script { font-family: 'Aref Ruqaa', 'Amiri', serif; line-height: 1.2; }
+        .quran-text { font-family: 'Amiri Quran', serif; line-height: 2.5; direction: rtl; }
+        .ornamental-border {
+            border: 2px solid transparent;
+            border-image: linear-gradient(to bottom right, #775a19, #e9c176, #775a19) 1;
+            padding: 24px;
+            position: relative;
+        }
+        .ornamental-border::before {
+            content: "";
+            position: absolute;
+            top: 6px; left: 6px; right: 6px; bottom: 6px;
+            border: 1px solid rgba(119, 90, 25, 0.4);
+            pointer-events: none;
+        }
+        .verse-separator::after {
+            content: "❁";
+            color: #775a19;
+            font-size: 1.2rem;
+            opacity: 0.7;
+        }
+        .slide { display: none; }
+        .slide.active { display: block; }
+        .fade-in { animation: fadeIn 0.5s ease-in-out; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .word-animation { animation: wordPop 0.6s ease-out; }
+        @keyframes wordPop {
+            0% { transform: scale(0.5); opacity: 0; }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        .floating-words { position: absolute; pointer-events: none; }
+        .floating-word {
+            position: absolute;
+            font-size: 24px;
+            color: rgba(0, 67, 44, 0.1);
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md antialiased overflow-x-hidden">
+
+<!-- شريحة 1: الترحيب -->
+<div id="slide1" class="slide active min-h-screen flex items-center justify-center px-margin-mobile md:px-margin-desktop py-12 fade-in">
+    <div class="absolute inset-0 z-0 opacity-15" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC8QEptJXKjVwx0DSrMPYHc2QCUZhdfe0qCn1LpwgfbVCY_SDJyUBzFg_bUfMvGUpleFVtR4OwfukN7wgWBb8hsikFpqunbyqz7NhY5SBbR0UQjzwGD9D_bQr3Fy6xU7UPFyDCACMy2vagD1XYBMahjYyb6k1q_a2BdPg5kjuEErrqE7GZRdxT9Q4Vod6szR9NFiR1QSYj8Sibh5da0NMyl2NZycNrmQ1Vrj3g0It3gUYuUd0paWK7Si7PjNo-S0W8Rguin8mjZ-Gx0'); background-size: cover; background-position: center center;"></div>
+    <div class="absolute inset-0 z-0 bg-[radial-gradient(circle_at_center,rgba(4,93,63,0.05)_0%,transparent_70%)]"></div>
+    <div class="relative z-10 w-full max-w-4xl bg-surface-container-lowest border border-secondary/30 shadow-[0_20px_60px_-15px_rgba(4,93,63,0.1)] rounded-xl p-8 md:p-16 lg:p-24 flex flex-col items-center text-center overflow-hidden">
+        <div class="absolute top-0 right-0 w-32 h-32 opacity-10 pointer-events-none" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAaE6B4VSotIQqcmdTUyLuX9cTArO16H4547vpQCKgQz2vMbStYjiN7qPw_j1xkvlVwkJPML-7DN7szDx8kD-7FBnFhxI8ph996IyFRRgXWdc5vV7OcYTD_KsuLRGyhs7nLXEmXwq7MMgDtfEk8kOWCrGJeZNN_uY-I1rx6HlQTlGdsNA1HflRfu4eulP4nIEmAvPSHD-UoOCzVVD9j6_fWP5OISeoN_rELs96CiAf1T5JORPpqg0nheyKDBsCpAgbz2TxhyM9Jn6_m'); background-size: contain; background-repeat: no-repeat; background-position: right top;"></div>
+        <div class="absolute bottom-0 left-0 w-32 h-32 opacity-10 pointer-events-none rotate-180" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAVy62aNfL15vWMkSWwoSfD3Y1dYOqcyESgJHxY7D_U0WDhqQokDwnp7BjwAmeBE8jlDHAMZrfHy-_r-v5Fdpbu5SXalPfRN-Cg6-AhEgRzX7lSgWqpLHvyZfb9KuHVyFTyH9UwgTReUjhkwK5KvMe0P73zBs5wDKaK8qc2dvqUc8-5dn-BfJhIuLOhwH0HtjP6nnBfA9rPBhYopfw3nqNV3zs1Wkb5MXa6WGMyjs9dYzGy83PSahh-mVahqBj4UxYH3bUjwAiT2OmT'); background-size: contain; background-repeat: no-repeat; background-position: right top;"></div>
+        <div class="w-20 h-20 rounded-full bg-primary-container/10 flex items-center justify-center mb-8 border border-secondary/20 shadow-inner">
+            <span class="material-symbols-outlined text-secondary" style="font-size: 40px; font-variation-settings: 'FILL' 1;">menu_book</span>
+        </div>
+        <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-6 leading-tight max-w-2xl">أهلاً بكم في رحلة نور البيان</h1>
+        <div class="flex items-center w-full max-w-xs mx-auto mb-8">
+            <div class="flex-grow border-t border-secondary/30"></div>
+            <div class="px-4"><span class="material-symbols-outlined text-secondary/60" style="font-size: 16px;">emergency</span></div>
+            <div class="flex-grow border-t border-secondary/30"></div>
+        </div>
+        <p class="font-headline-sm text-headline-sm text-on-surface-variant mb-12 max-w-2xl leading-relaxed">مشروع وداعاً للتلقين وبناء جيل قرآني فريد</p>
+        <button onclick="nextSlide()" class="px-10 py-4 bg-secondary text-on-secondary font-label-md text-label-md rounded-full shadow-lg shadow-secondary/20 hover:bg-on-secondary-container transition-all duration-300 flex items-center justify-center gap-3 group relative overflow-hidden">
+            <span class="relative z-10">لنبدأ</span>
+            <span class="material-symbols-outlined relative z-10 group-hover:-translate-x-1 transition-transform duration-300">arrow_back</span>
+            <div class="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        </button>
+    </div>
+</div>
+
+<!-- شريحة 2: مشروع وداعاً للتلقين - حالات الحروف العشرين -->
+<div id="slide2" class="slide min-h-screen px-margin-mobile md:px-margin-desktop py-12 fade-in">
+    <header class="mb-12 text-center md:text-right relative">
+        <div class="inline-flex items-center gap-2 px-3 py-1 bg-surface-tint/10 rounded-full mb-4">
+            <span class="material-symbols-outlined text-primary text-sm">auto_stories</span>
+            <span class="font-label-md text-label-md text-primary">مشروع وداعاً للتلقين</span>
+        </div>
+        <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-4">حالات الحروف العشرين</h1>
+        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+            دراسة تطبيقية على حرف <strong class="text-secondary font-bold">الباء (ب)</strong> لتوضيح الحالات العشرين التي يمر بها الحرف العربي من حيث الحركات، السكون، التنوين، المدود، والشدة.
+        </p>
+        <div class="flex items-center justify-center md:justify-start mt-8">
+            <div class="h-px bg-secondary/30 w-16"></div>
+            <div class="mx-4 text-secondary rotate-45 transform w-2 h-2 bg-secondary/20 border border-secondary/50"></div>
+            <div class="h-px bg-secondary/30 w-64"></div>
+        </div>
+    </header>
+    <section class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-unit flex-wrap">
+        <article class="bg-surface-container-lowest border border-secondary/30 rounded-xl p-6 flex flex-col items-center justify-center relative shadow-sm shadow-primary/5 hover:-translate-y-1 hover:shadow-md hover:shadow-primary/10 transition-all duration-300 group">
+            <div class="text-[56px] arabic-script text-primary group-hover:text-surface-tint transition-colors mb-2">بَ</div>
+            <div class="font-label-md text-label-md text-on-surface-variant bg-surface-container px-3 py-1 rounded-full border border-secondary/10">الفتحة</div>
+        </article>
+        <article class="bg-surface-container-lowest border border-secondary/30 rounded-xl p-6 flex flex-col items-center justify-center relative shadow-sm shadow-primary/5 hover:-translate-y-1 hover:shadow-md hover:shadow-primary/10 transition-all duration-300 group">
+            <div class="text-[56px] arabic-script text-primary group-hover:text-surface-tint transition-colors mb-2">بِ</div>
+            <div class="font-label-md text-label-md text-on-surface-variant bg-surface-container px-3 py-1 rounded-full border border-secondary/10">الكسرة</div>
+        </article>
+        <article class="bg-surface-container-lowest border border-secondary/30 rounded-xl p-6 flex flex-col items-center justify-center relative shadow-sm shadow-primary/5 hover:-translate-y-1 hover:shadow-md hover:shadow-primary/10 transition-all duration-300 group">
+            <div class="text-[56px] arabic-script text-primary group-hover:text-surface-tint transition-colors mb-2">بُ</div>
+            <div class="font-label-md text-label-md text-on-surface-variant bg-surface-container px-3 py-1 rounded-full border border-secondary/10">الضمة</div>
+        </article>
+        <article class="bg-surface-container-lowest border border-secondary/30 rounded-xl p-6 flex flex-col items-center justify-center relative shadow-sm shadow-primary/5 hover:-translate-y-1 hover:shadow-md hover:shadow-primary/10 transition-all duration-300 group">
+            <div class="text-[56px] arabic-script text-primary group-hover:text-surface-tint transition-colors mb-2">بْ</div>
+            <div class="font-label-md text-label-md text-on-surface-variant bg-surface-container px-3 py-1 rounded-full border border-secondary/10">السكون</div>
+        </article>
+        <article class="bg-surface-container-lowest border border-secondary/30 rounded-xl p-6 flex flex-col items-center justify-center relative shadow-sm shadow-primary/5 hover:-translate-y-1 hover:shadow-md hover:shadow-primary/10 transition-all duration-300 group">
+            <div class="text-[56px] arabic-script text-primary group-hover:text-surface-tint transition-colors mb-2">بًا</div>
+            <div class="font-label-md text-label-md text-on-surface-variant bg-surface-container px-3 py-1 rounded-full border border-secondary/10 text-center leading-tight">تنوين<br/>بالفتح</div>
+        </article>
+        <article class="bg-surface-container-lowest border border-secondary/30 rounded-xl p-6 flex flex-col items-center justify-center relative shadow-sm shadow-primary/5 hover:-translate-y-1 hover:shadow-md hover:shadow-primary/10 transition-all duration-300 group">
+            <div class="text-[56px] arabic-script text-primary group-hover:text-surface-tint transition-colors mb-2">بٍ</div>
+            <div class="font-label-md text-label-md text-on-surface-variant bg-surface-container px-3 py-1 rounded-full border border-secondary/10 text-center leading-tight">تنوين<br/>بالكسر</div>
+        </article>
+        <article class="bg-surface-container-lowest border border-secondary/30 rounded-xl p-6 flex flex-col items-center justify-center relative shadow-sm shadow-primary/5 hover:-translate-y-1 hover:shadow-md hover:shadow-primary/10 transition-all duration-300 group">
+            <div class="text-[56px] arabic-script text-primary group-hover:text-surface-tint transition-colors mb-2">بٌ</div>
+            <div class="font-label-md text-label-md text-on-surface-variant bg-surface-container px-3 py-1 rounded-full border border-secondary/10 text-center leading-tight">تنوين<br/>بالضم</div>
+        </article>
+        <article class="bg-surface-container-lowest border border-secondary/30 rounded-xl p-6 flex flex-col items-center justify-center relative shadow-sm shadow-primary/5 hover:-translate-y-1 hover:shadow-md hover:shadow-primary/10 transition-all duration-300 group">
+            <div class="text-[56px] arabic-script text-primary group-hover:text-surface-tint transition-colors mb-2">بَا</div>
+            <div class="font-label-md text-label-md text-on-surface-variant bg-surface-container px-3 py-1 rounded-full border border-secondary/10 text-center leading-tight">مد<br/>بالألف</div>
+        </article>
+        <article class="bg-surface-container-lowest border border-secondary/30 rounded-xl p-6 flex flex-col items-center justify-center relative shadow-sm shadow-primary/5 hover:-translate-y-1 hover:shadow-md hover:shadow-primary/10 transition-all duration-300 group">
+            <div class="text-[56px] arabic-script text-primary group-hover:text-surface-tint transition-colors mb-2">بِي</div>
+            <div class="font-label-md text-label-md text-on-surface-variant bg-surface-container px-3 py-1 rounded-full border border-secondary/10 text-center leading-tight">مد<br/>بالياء</div>
+        </article>
+        <article class="bg-surface-container-lowest border border-secondary/30 rounded-xl p-6 flex flex-col items-center justify-center relative shadow-sm shadow-primary/5 hover:-translate-y-1 hover:shadow-md hover:shadow-primary/10 transition-all duration-300 group">
+            <div class="text-[56px] arabic-script text-primary group-hover:text-surface-tint transition-colors mb-2">بُو</div>
+            <div class="font-label-md text-label-md text-on-surface-variant bg-surface-container px-3 py-1 rounded-full border border-secondary/10 text-center leading-tight">مد<br/>بالواو</div>
+        </article>
+        <article class="bg-surface-container-lowest border border-secondary/30 rounded-xl p-6 flex flex-col items-center justify-center relative shadow-sm shadow-primary/5 hover:-translate-y-1 hover:shadow-md hover:shadow-primary/10 transition-all duration-300 group bg-gradient-to-br from-surface-container-lowest to-surface-container-low">
+            <div class="text-[56px] arabic-script text-secondary group-hover:text-on-secondary-container transition-colors mb-2">بّ</div>
+            <div class="font-label-md text-label-md text-on-surface-variant bg-surface-container px-3 py-1 rounded-full border border-secondary/20">الشدة المفرده</div>
+        </article>
+        <article class="bg-surface-container-lowest border border-secondary/30 rounded-xl p-6 flex flex-col items-center justify-center relative shadow-sm shadow-primary/5 hover:-translate-y-1 hover:shadow-md hover:shadow-primary/10 transition-all duration-300 group">
+            <div class="text-[56px] arabic-script text-primary group-hover:text-surface-tint transition-colors mb-2">بَّ</div>
+            <div class="font-label-md text-label-md text-on-surface-variant bg-surface-container px-3 py-1 rounded-full border border-secondary/10 text-center leading-tight">شدة<br/>وفتحة</div>
+        </article>
+        <article class="bg-surface-container-lowest border border-secondary/30 rounded-xl p-6 flex flex-col items-center justify-center relative shadow-sm shadow-primary/5 hover:-translate-y-1 hover:shadow-md hover:shadow-primary/10 transition-all duration-300 group">
+            <div class="text-[56px] arabic-script text-primary group-hover:text-surface-tint transition-colors mb-2">بِّ</div>
+            <div class="font-label-md text-label-md text-on-surface-variant bg-surface-container px-3 py-1 rounded-full border border-secondary/10 text-center leading-tight">شدة<br/>وكسرة</div>
+        </article>
+        <article class="bg-surface-container-lowest border border-secondary/30 rounded-xl p-6 flex flex-col items-center justify-center relative shadow-sm shadow-primary/5 hover:-translate-y-1 hover:shadow-md hover:shadow-primary/10 transition-all duration-300 group">
+            <div class="text-[56px] arabic-script text-primary group-hover:text-surface-tint transition-colors mb-2">بُّ</div>
+            <div class="font-label-md text-label-md text-on-surface-variant bg-surface-container px-3 py-1 rounded-full border border-secondary/10 text-center leading-tight">شدة<br/>وضمة</div>
+        </article>
+        <article class="bg-surface-container-lowest border border-secondary/30 rounded-xl p-6 flex flex-col items-center justify-center relative shadow-sm shadow-primary/5 hover:-translate-y-1 hover:shadow-md hover:shadow-primary/10 transition-all duration-300 group">
+            <div class="text-[56px] arabic-script text-primary group-hover:text-surface-tint transition-colors mb-2">بًّا</div>
+            <div class="font-label-md text-label-md text-on-surface-variant bg-surface-container px-3 py-1 rounded-full border border-secondary/10 text-center leading-tight text-xs">شدة وتنوين<br/>بالفتح</div>
+        </article>
+        <article class="bg-surface-container-lowest border border-secondary/30 rounded-xl p-6 flex flex-col items-center justify-center relative shadow-sm shadow-primary/5 hover:-translate-y-1 hover:shadow-md hover:shadow-primary/10 transition-all duration-300 group">
+            <div class="text-[56px] arabic-script text-primary group-hover:text-surface-tint transition-colors mb-2">بٍّ</div>
+            <div class="font-label-md text-label-md text-on-surface-variant bg-surface-container px-3 py-1 rounded-full border border-secondary/10 text-center leading-tight text-xs">شدة وتنوين<br/>بالكسر</div>
+        </article>
+        <article class="bg-surface-container-lowest border border-secondary/30 rounded-xl p-6 flex flex-col items-center justify-center relative shadow-sm shadow-primary/5 hover:-translate-y-1 hover:shadow-md hover:shadow-primary/10 transition-all duration-300 group">
+            <div class="text-[56px] arabic-script text-primary group-hover:text-surface-tint transition-colors mb-2">بٌّ</div>
+            <div class="font-label-md text-label-md text-on-surface-variant bg-surface-container px-3 py-1 rounded-full border border-secondary/10 text-center leading-tight text-xs">شدة وتنوين<br/>بالضم</div>
+        </article>
+        <article class="bg-surface-container-lowest border border-secondary/30 rounded-xl p-6 flex flex-col items-center justify-center relative shadow-sm shadow-primary/5 hover:-translate-y-1 hover:shadow-md hover:shadow-primary/10 transition-all duration-300 group">
+            <div class="text-[56px] arabic-script text-primary group-hover:text-surface-tint transition-colors mb-2">بَّا</div>
+            <div class="font-label-md text-label-md text-on-surface-variant bg-surface-container px-3 py-1 rounded-full border border-secondary/10 text-center leading-tight text-xs">شدة وفتحة<br/>مع المد</div>
+        </article>
+        <article class="bg-surface-container-lowest border border-secondary/30 rounded-xl p-6 flex flex-col items-center justify-center relative shadow-sm shadow-primary/5 hover:-translate-y-1 hover:shadow-md hover:shadow-primary/10 transition-all duration-300 group">
+            <div class="text-[56px] arabic-script text-primary group-hover:text-surface-tint transition-colors mb-2">بِّي</div>
+            <div class="font-label-md text-label-md text-on-surface-variant bg-surface-container px-3 py-1 rounded-full border border-secondary/10 text-center leading-tight text-xs">شدة وكسرة<br/>مع المد</div>
+        </article>
+        <article class="bg-surface-container-lowest border border-secondary/30 rounded-xl p-6 flex flex-col items-center justify-center relative shadow-sm shadow-primary/5 hover:-translate-y-1 hover:shadow-md hover:shadow-primary/10 transition-all duration-300 group">
+            <div class="text-[56px] arabic-script text-primary group-hover:text-surface-tint transition-colors mb-2">بُّو</div>
+            <div class="font-label-md text-label-md text-on-surface-variant bg-surface-container px-3 py-1 rounded-full border border-secondary/10 text-center leading-tight text-xs">شدة وضمة<br/>مع المد</div>
+        </article>
+    </section>
+    <footer class="mt-20 pt-8 border-t border-secondary/20 flex flex-col sm:flex-row items-center justify-between gap-6 pb-20">
+        <div class="flex-1">
+            <div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden mb-2">
+                <div class="bg-secondary h-full w-1/4 rounded-full"></div>
+            </div>
+            <p class="font-label-md text-label-md text-on-surface-variant text-sm">مستوى التقدم: الأساسيات</p>
+        </div>
+        <button onclick="nextSlide()" class="group flex items-center gap-4 bg-primary hover:bg-surface-tint text-on-primary px-8 py-4 rounded-full shadow-md shadow-primary/20 transition-all duration-300 border border-primary-container">
+            <span class="font-headline-sm text-headline-sm">الدرس التالي: البسملة</span>
+            <span class="material-symbols-outlined transform group-hover:-translate-x-2 transition-transform">arrow_forward</span>
+        </button>
+    </footer>
+</div>
+
+<!-- شريحة 3: البسملة -->
+<div id="slide3" class="slide min-h-screen flex items-center justify-center px-margin-mobile md:px-margin-desktop py-12 fade-in">
+    <div class="relative w-full max-w-4xl bg-surface-container-lowest border border-secondary/30 shadow-[0_20px_40px_-15px_rgba(4,93,63,0.1)] rounded-2xl overflow-hidden">
+        <div class="absolute inset-0 opacity-5 pointer-events-none" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBGsmVk_NUAqPI9aI-3Qkb8pNbJvhoGph8fBKPVb3oJAPqk9BWljgVoGqb-kJURaQvwQ65nV63LiQ85vt4RfXDqQHOevesr3v5tmDKXF5F0aQwyclX9JamhvZsniGp6_YVqjkHOj0hO9Ur1g1c72TOF_d-v9g_SbwEDNq2ToyKcbTX0uYaofv1lE7GYhDmpoc7co_fVptYYzTJEREOsFhGWCIsg7KqKi8DgJ84mC9aMm7uvhdsaqo2xCMuI9y1JgctscUtcVHceX3vB'); background-size: cover; background-position: center;"></div>
+        <div class="relative z-10 px-8 py-24 md:px-16 md:py-32 flex flex-col items-center text-center">
+            <div class="mb-12 font-arabic text-primary text-3xl md:text-4xl tracking-wide">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</div>
+            <div class="font-quran text-on-surface text-5xl md:text-7xl leading-[2.5] md:leading-[3]">
+                بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ
+            </div>
+            <div class="mt-16 text-secondary/40">
+                <span class="material-symbols-outlined text-4xl">spa</span>
+            </div>
+        </div>
+    </div>
+    <div class="fixed bottom-8 left-1/2 transform -translate-x-1/2 flex gap-4">
+        <button onclick="prevSlide()" class="flex items-center gap-2 px-6 py-3 border-2 border-secondary text-secondary rounded-full font-label-md hover:bg-surface-container transition-colors">
+            <span class="material-symbols-outlined">arrow_back</span> السابق
+        </button>
+        <button onclick="nextSlide()" class="flex items-center gap-2 px-6 py-3 bg-primary text-on-primary rounded-full font-label-md hover:bg-surface-tint transition-colors">
+            التالي <span class="material-symbols-outlined">arrow_forward</span>
+        </button>
+    </div>
+</div>
+
+<!-- شريحة 4: سورة الفاتحة -->
+<div id="slide4" class="slide min-h-screen px-margin-mobile md:px-margin-desktop py-12 fade-in">
+    <div class="w-full max-w-4xl mx-auto relative">
+        <div class="flex items-center justify-center mb-12">
+            <div class="h-px bg-secondary/30 flex-1"></div>
+            <div class="px-4 text-secondary/50"><span class="material-symbols-outlined text-2xl">eco</span></div>
+            <div class="h-px bg-secondary/30 flex-1"></div>
+        </div>
+        <div class="bg-surface-container-lowest border border-secondary/30 rounded-xl p-8 md:p-16 relative overflow-hidden shadow-[0_20px_40px_-15px_rgba(4,93,63,0.1)]">
+            <div class="absolute top-0 left-0 w-16 h-16 border-t border-l border-secondary/40 rounded-tl-xl opacity-50"></div>
+            <div class="absolute top-0 right-0 w-16 h-16 border-t border-r border-secondary/40 rounded-tr-xl opacity-50"></div>
+            <div class="absolute bottom-0 left-0 w-16 h-16 border-b border-l border-secondary/40 rounded-bl-xl opacity-50"></div>
+            <div class="absolute bottom-0 right-0 w-16 h-16 border-b border-r border-secondary/40 rounded-br-xl opacity-50"></div>
+            <div class="text-center mb-12">
+                <h1 class="font-display-lg text-[48px] md:text-[64px] text-primary font-bold mb-4 quran-text">سورة الفاتحة</h1>
+                <div class="inline-flex items-center gap-2 bg-surface-container py-1 px-4 rounded-full text-secondary font-label-md border border-secondary/20">
+                    <span>سورة الفاتحة</span>
+                    <span class="w-1 h-1 rounded-full bg-secondary/50 mx-1"></span>
+                    <span>سورة مكية</span>
+                </div>
+            </div>
+            <div class="text-center mb-10">
+                <p class="font-display-lg text-[32px] md:text-[40px] text-primary quran-text">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
+            </div>
+            <div class="text-center quran-text">
+                <p class="font-display-lg text-[32px] md:text-[48px] text-on-surface mb-8 quran-text">
+                    الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ ﴿١﴾<br/>
+                    الرَّحْمَٰنِ الرَّحِيمِ ﴿٢﴾<br/>
+                    مَالِكِ يَوْمِ الدِّينِ ﴿٣﴾<br/>
+                    إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ ﴿٤﴾<br/>
+                    اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ ﴿٥﴾<br/>
+                    صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ ﴿٦﴾
+                </p>
+            </div>
+        </div>
+        <div class="flex items-center justify-center mt-12 mb-16">
+            <div class="h-px bg-secondary/30 flex-1"></div>
+            <div class="px-4 text-secondary/50"><span class="material-symbols-outlined text-2xl">eco</span></div>
+            <div class="h-px bg-secondary/30 flex-1"></div>
+        </div>
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mt-8">
+            <button onclick="prevSlide()" class="w-full sm:w-auto flex items-center justify-center gap-2 px-6 py-3 border-2 border-secondary text-secondary rounded-full font-label-md hover:bg-surface-container transition-colors">
+                <span class="material-symbols-outlined">arrow_back</span> العودة للبسملة
+            </button>
+            <button onclick="nextSlide()" class="w-full sm:w-auto flex items-center justify-center gap-2 px-6 py-3 bg-primary-container text-on-primary-container rounded-full font-label-md hover:bg-primary transition-colors shadow-md">
+                التالي <span class="material-symbols-outlined">arrow_forward</span>
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- شريحة 5: مشروع أجود قرآني - تحفة الأطفال -->
+<div id="slide5" class="slide min-h-screen px-margin-mobile md:px-margin-desktop py-12 fade-in">
+    <header class="text-center mb-12">
+        <p class="font-label-md text-label-md text-secondary tracking-widest mb-2 uppercase">مشروع أجود قرآني</p>
+        <h2 class="font-display-lg text-display-lg text-primary mb-4 arabic-text">متن تحفة الأطفال</h2>
+        <div class="flex items-center justify-center gap-4">
+            <div class="h-[1px] w-16 bg-secondary/30"></div>
+            <span class="material-symbols-outlined text-secondary text-sm">diamond</span>
+            <div class="h-[1px] w-16 bg-secondary/30"></div>
+        </div>
+    </header>
+    
+    <!-- Chapter Selector -->
+    <section class="mb-10">
+        <div class="flex overflow-x-auto pb-4 gap-3 snap-x hide-scrollbar justify-center flex-wrap">
+            <button onclick="selectChapter('intro')" class="chapter-btn snap-center shrink-0 bg-primary-container text-on-primary-container border border-primary/20 rounded-full px-6 py-2 font-headline-sm text-body-md transition-all shadow-sm shadow-primary/10">المقدمة</button>
+            <button onclick="selectChapter('noon')" class="chapter-btn snap-center shrink-0 bg-surface-container-lowest text-on-surface-variant border border-secondary/20 rounded-full px-6 py-2 font-headline-sm text-body-md hover:bg-secondary-container/20 transition-all">أحكام النون الساكنة والتنوين</button>
+            <button onclick="selectChapter('meem')" class="chapter-btn snap-center shrink-0 bg-surface-container-lowest text-on-surface-variant border border-secondary/20 rounded-full px-6 py-2 font-headline-sm text-body-md hover:bg-secondary-container/20 transition-all">أحكام الميم والنون المشددتين</button>
+            <button onclick="selectChapter('meem_sakin')" class="chapter-btn snap-center shrink-0 bg-surface-container-lowest text-on-surface-variant border border-secondary/20 rounded-full px-6 py-2 font-headline-sm text-body-md hover:bg-secondary-container/20 transition-all">أحكام الميم الساكنة</button>
+            <button onclick="selectChapter('lam')" class="chapter-btn snap-center shrink-0 bg-surface-container-lowest text-on-surface-variant border border-secondary/20 rounded-full px-6 py-2 font-headline-sm text-body-md hover:bg-secondary-container/20 transition-all">حكم لام أل ولام الفعل</button>
+        </div>
+    </section>
+
+    <!-- The Text Container -->
+    <article class="bg-surface-container-lowest rounded-xl shadow-xl shadow-primary/5 overflow-hidden">
+        <div class="ornamental-border bg-[#FDFBF7]">
+            <div class="text-center mb-10 mt-4">
+                <h3 id="chapter-title" class="inline-block font-display-lg text-headline-md text-primary-fixed-variant border-b-2 border-secondary/40 pb-2 px-8 arabic-text">المقدمة</h3>
+            </div>
+            <div id="verses-container" class="space-y-6 px-4 md:px-12 font-headline-sm text-headline-sm text-on-surface arabic-text">
+                <!-- Verses will be loaded here -->
+            </div>
+            <div class="mt-12 flex justify-center">
+                <span class="material-symbols-outlined text-secondary/40 text-4xl">local_florist</span>
+            </div>
+        </div>
+    </article>
+
+    <div class="mt-8 flex justify-between items-center">
+        <button onclick="prevSlide()" class="flex items-center gap-2 text-on-surface-variant font-label-md hover:bg-surface-container px-4 py-2 rounded-full transition-colors">
+            <span class="material-symbols-outlined">arrow_back</span> السابق
+        </button>
+        <div id="verse-counter" class="text-on-surface-variant font-body-md text-sm">الآيات ١ - ٥ من ٦١</div>
+        <button onclick="nextSlide()" class="flex items-center gap-2 text-primary font-label-md hover:bg-primary-container/20 px-4 py-2 rounded-full transition-colors">
+            <span>التالي</span>
+            <span class="material-symbols-outlined">arrow_forward</span>
+        </button>
+    </div>
+</div>
+
+<!-- شريحة 6: كتب نور البيان -->
+<div id="slide6" class="slide min-h-screen px-margin-mobile md:px-margin-desktop py-12 fade-in">
+    <header class="mb-16 text-center lg:text-right">
+        <h1 class="font-display-lg text-display-lg text-primary mb-4">مكتبة نور البيان</h1>
+        <div class="h-1 w-24 bg-secondary/50 rounded-full mx-auto lg:mx-0"></div>
+    </header>
+    <div class="max-w-[1200px] mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <article class="group relative bg-surface-container-lowest border border-secondary/30 rounded-xl overflow-hidden shadow-lg shadow-primary/5 hover:shadow-xl hover:-translate-y-1 transition-all duration-500 flex flex-col">
+                <div class="p-8 flex flex-col flex-grow items-center text-center justify-center bg-gradient-to-b from-surface-container-lowest to-surface-container-low min-h-[300px]">
+                    <h3 class="font-display-lg text-headline-md text-primary mb-4">كتاب نور البيان</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant mb-8 line-clamp-2">المنهج الأساسي لتعلم القراءة بالقرآن الكريم، بأسلوب سهل وميسر.</p>
+                    <button class="mt-auto bg-primary-container text-on-primary-container px-6 py-2.5 rounded-full font-label-md flex items-center gap-2 hover:bg-primary-fixed-variant transition-colors shadow-sm">
+                        <span class="material-symbols-outlined text-sm">menu_book</span> عرض الكتاب
+                    </button>
+                </div>
+            </article>
+            <article class="group relative bg-surface-container-lowest border border-secondary/30 rounded-xl overflow-hidden shadow-lg shadow-primary/5 hover:shadow-xl hover:-translate-y-1 transition-all duration-500 flex flex-col">
+                <div class="p-8 flex flex-col flex-grow items-center text-center justify-center bg-gradient-to-b from-surface-container-lowest to-surface-container-low min-h-[300px]">
+                    <h3 class="font-display-lg text-headline-md text-primary mb-4">كتاب التبيان الجزء الأول</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant mb-8 line-clamp-2">الجزء الأول من سلسلة التبيان في إتقان القراءة وتجويد القرآن.</p>
+                    <button class="mt-auto bg-surface-container-lowest border border-secondary text-secondary px-6 py-2.5 rounded-full font-label-md flex items-center gap-2 hover:bg-secondary-container hover:text-on-secondary-container transition-colors">
+                        <span class="material-symbols-outlined text-sm">visibility</span> عرض الكتاب
+                    </button>
+                </div>
+            </article>
+            <article class="group relative bg-surface-container-lowest border border-secondary/30 rounded-xl overflow-hidden shadow-lg shadow-primary/5 hover:shadow-xl hover:-translate-y-1 transition-all duration-500 flex flex-col">
+                <div class="p-8 flex flex-col flex-grow items-center text-center justify-center bg-gradient-to-b from-surface-container-lowest to-surface-container-low min-h-[300px]">
+                    <h3 class="font-display-lg text-headline-md text-primary mb-4">كتاب التبيان الجزء الثاني</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant mb-8 line-clamp-2">استكمال رحلة الإتقان مع الجزء الثاني من سلسلة التبيان.</p>
+                    <button class="mt-auto bg-surface-container-lowest border border-secondary text-secondary px-6 py-2.5 rounded-full font-label-md flex items-center gap-2 hover:bg-secondary-container hover:text-on-secondary-container transition-colors">
+                        <span class="material-symbols-outlined text-sm">visibility</span> عرض الكتاب
+                    </button>
+                </div>
+            </article>
+            <article class="group relative bg-surface-container-lowest border border-secondary/30 rounded-xl overflow-hidden shadow-lg shadow-primary/5 hover:shadow-xl hover:-translate-y-1 transition-all duration-500 flex flex-col">
+                <div class="p-8 flex flex-col flex-grow items-center text-center justify-center bg-gradient-to-b from-surface-container-lowest to-surface-container-low min-h-[300px]">
+                    <h3 class="font-display-lg text-headline-md text-primary mb-4">كتاب قواعد البيان</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant mb-8 line-clamp-2">شرح مفصل للقواعد الأساسية في لغة القرآن الكريم.</p>
+                    <button class="mt-auto bg-primary-container text-on-primary-container px-6 py-2.5 rounded-full font-label-md flex items-center gap-2 hover:bg-primary-fixed-variant transition-colors shadow-sm">
+                        <span class="material-symbols-outlined text-sm">menu_book</span> عرض الكتاب
+                    </button>
+                </div>
+            </article>
+            <article class="group relative bg-surface-container-lowest border border-secondary/30 rounded-xl overflow-hidden shadow-lg shadow-primary/5 hover:shadow-xl hover:-translate-y-1 transition-all duration-500 flex flex-col">
+                <div class="p-8 flex flex-col flex-grow items-center text-center justify-center bg-gradient-to-b from-surface-container-lowest to-surface-container-low min-h-[300px]">
+                    <h3 class="font-display-lg text-headline-md text-primary mb-4">كتاب ما لا يسع أطفال المسلمين جهله</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant mb-8 line-clamp-2">أساسيات العقيدة والأخلاق للأطفال بأسلوب شيق ومبسط.</p>
+                    <button class="mt-auto bg-surface-container-lowest border border-secondary text-secondary px-6 py-2.5 rounded-full font-label-md flex items-center gap-2 hover:bg-secondary-container hover:text-on-secondary-container transition-colors">
+                        <span class="material-symbols-outlined text-sm">visibility</span> عرض الكتاب
+                    </button>
+                </div>
+            </article>
+        </div>
+    </div>
+    <div class="mt-16 flex justify-center gap-4">
+        <button onclick="prevSlide()" class="flex items-center gap-2 px-6 py-3 border-2 border-secondary text-secondary rounded-full font-label-md hover:bg-surface-container transition-colors">
+            <span class="material-symbols-outlined">arrow_back</span> السابق
+        </button>
+        <button onclick="nextSlide()" class="flex items-center gap-2 px-6 py-3 bg-primary text-on-primary rounded-full font-label-md hover:bg-surface-tint transition-colors">
+            التالي <span class="material-symbols-outlined">arrow_forward</span>
+        </button>
+    </div>
+</div>
+
+<!-- شريحة 7: مشروع لغة أهل الجنة -->
+<div id="slide7" class="slide min-h-screen flex items-center justify-center px-margin-mobile md:px-margin-desktop py-12 fade-in">
+    <div class="text-center">
+        <header class="mb-12">
+            <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-4">مشروع لغة أهل الجنة</h1>
+            <div class="w-24 h-0.5 bg-secondary/40 mx-auto rounded-full"></div>
+        </header>
+        <div class="relative w-full max-w-4xl bg-surface-container-lowest border border-secondary/30 rounded-2xl shadow-[0_20px_40px_-15px_rgba(4,93,63,0.1)] overflow-hidden">
+            <div class="absolute inset-0 opacity-5 pointer-events-none bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBGsmVk_NUAqPI9aI-3Qkb8pNbJvhoGph8fBKPVb3oJAPqk9BWljgVoGqb-kJURaQvwQ65nV63LiQ85vt4RfXDqQHOevesr3v5tmDKXF5F0aQwyclX9JamhvZsniGp6_YVqjkHOj0hO9Ur1g1c72TOF_d-v9g_SbwEDNq2ToyKcbTX0uYaofv1lE7GYhDmpoc7co_fVptYYzTJEREOsFhGWCIsg7KqKi8DgJ84mC9aMm7uvhdsaqo2xCMuI9y1JgctscUtcVHceX3vB');"></div>
+            <div class="relative z-10 px-8 py-16 md:px-16 md:py-24 flex flex-col items-center text-center">
+                <div class="mb-12 font-arabic text-primary text-2xl md:text-3xl tracking-wide">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</div>
+                <div class="font-quran text-on-surface text-3xl md:text-5xl leading-[2.2] md:leading-[2.5] max-w-3xl">
+                    قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ ﴿١﴾ مِنْ شَرِّ مَا خَلَقَ ﴿٢﴾ وَمِنْ شَرِّ غَاسِقٍ إِذَا وَقَبَ ﴿٣﴾ وَمِنْ شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ ﴿٤﴾ وَمِنْ شَرِّ حَاسِدٍ إِذَا حَسَدَ ﴿٥﴾
+                </div>
+                <div class="mt-16 text-secondary/40">
+                    <span class="material-symbols-outlined text-4xl">spa</span>
+                </div>
+            </div>
+        </div>
+        <div class="mt-12 flex justify-center gap-4">
+            <button onclick="prevSlide()" class="flex items-center gap-2 px-6 py-3 border-2 border-secondary text-secondary rounded-full font-label-md hover:bg-surface-container transition-colors">
+                <span class="material-symbols-outlined">arrow_back</span> السابق
+            </button>
+            <button onclick="nextSlide()" class="flex items-center gap-2 px-6 py-3 bg-primary text-on-primary rounded-full font-label-md hover:bg-surface-tint transition-colors">
+                التالي <span class="material-symbols-outlined">arrow_forward</span>
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- شريحة 8: تحدي الكلمات -->
+<div id="slide8" class="slide min-h-screen px-margin-mobile md:px-margin-desktop py-12 fade-in">
+    <header class="text-center mb-12 max-w-2xl w-full mx-auto">
+        <h2 class="font-display-lg text-display-lg text-primary mb-4">تحدي الكلمات</h2>
+        <p class="font-body-lg text-body-lg text-on-surface-variant">اختبر قراءتك للكلمات الثلاثية بحركة الفتح. اضغط على الزر لظهور كلمة جديدة.</p>
+    </header>
+    
+    <div class="relative w-full max-w-3xl aspect-[16/9] md:aspect-[2/1] bg-surface-container-lowest border border-secondary/30 rounded-xl shadow-[0_10px_20px_rgba(4,93,63,0.1)] mb-12 flex items-center justify-center overflow-hidden mx-auto">
+        <div class="absolute inset-0 opacity-5 pointer-events-none" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAYTKF7OecYoXs31_jR98sOQHZdkeypnFZdKV7tOZn6zcqLYG3bCkHE9IPXjsRCzpDEqTXpAddS0Q9DrZn6Q7Zh7kOoU2T2spXFPNeIR-p7L2DsSSg7LoBqob3m7v_EBGX7YW1w_PBIdu5RUM7ExoaRiVx72J12I89AjTgqElLw7GDu6GTRJHoQy_2pBCyAHyiGbD5ksK3gy_RrmEGCme5Kf9TkrdGU0HXLUNdU9C1vG7jMe3xykK3OQXoe5u9WWcmX4TyuT2wWjJYz'); background-size: cover; background-position: center;"></div>
+        
+        <!-- Floating words animation -->
+        <div id="floating-words" class="floating-words inset-0"></div>
+        
+        <div id="word-display" class="relative z-10 text-center transform scale-100 transition-transform duration-500">
+            <div class="font-display-lg text-[120px] md:text-[160px] text-primary leading-none tracking-wider opacity-100 transition-opacity duration-500 word-animation" dir="rtl" id="current-word">سَأَلَ</div>
+            <div class="mt-8 flex justify-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-primary"></span>
+                <span class="w-2 h-2 rounded-full bg-primary-container/30"></span>
+                <span class="w-2 h-2 rounded-full bg-primary-container/30"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex flex-col sm:flex-row gap-6 w-full max-w-xl justify-center mx-auto">
+        <button onclick="selectWord()" class="flex-1 flex items-center justify-center gap-3 bg-primary text-on-primary hover:bg-primary-fixed-variant transition-colors duration-300 py-6 px-8 rounded-full shadow-[0_10px_20px_rgba(4,93,63,0.1)] group">
+            <span class="material-symbols-outlined text-3xl group-hover:rotate-180 transition-transform duration-500">refresh</span>
+            <span class="font-headline-md text-headline-sm">اختر كلمة</span>
+        </button>
+        <button onclick="resetSelection()" class="flex-1 flex items-center justify-center gap-3 bg-surface-container-low text-primary border border-secondary/30 hover:bg-secondary-container/20 transition-colors duration-300 py-6 px-8 rounded-full">
+            <span class="material-symbols-outlined text-2xl">skip_next</span>
+            <span class="font-headline-sm text-headline-sm">إعادة للمشرف</span>
+        </button>
+    </div>
+
+    <div class="mt-16 w-full max-w-4xl text-center mx-auto">
+        <div class="inline-flex items-center gap-2 px-4 py-2 bg-surface-variant rounded-full text-on-surface-variant font-label-md">
+            <span class="material-symbols-outlined text-sm">library_books</span>
+            <span>مخزون الكلمات: ١٢٠ كلمة ثلاثية بـ الفتح</span>
+        </div>
+        <div class="mt-8 grid grid-cols-3 md:grid-cols-6 gap-4 opacity-50">
+            <div class="bg-surface-container p-4 rounded-lg border border-secondary/10 font-display-lg text-headline-sm text-center">دَرَسَ</div>
+            <div class="bg-surface-container p-4 rounded-lg border border-secondary/10 font-display-lg text-headline-sm text-center">كَتَبَ</div>
+            <div class="bg-surface-container p-4 rounded-lg border border-secondary/10 font-display-lg text-headline-sm text-center">قَرَأَ</div>
+            <div class="bg-surface-container p-4 rounded-lg border border-secondary/10 font-display-lg text-headline-sm text-center hidden md:block">جَلَسَ</div>
+            <div class="bg-surface-container p-4 rounded-lg border border-secondary/10 font-display-lg text-headline-sm text-center hidden md:block">ذَهَبَ</div>
+            <div class="bg-surface-container p-4 rounded-lg border border-secondary/10 font-display-lg text-headline-sm text-center hidden md:block">رَسَمَ</div>
+        </div>
+    </div>
+
+    <div class="mt-16 flex justify-center gap-4">
+        <button onclick="prevSlide()" class="flex items-center gap-2 px-6 py-3 border-2 border-secondary text-secondary rounded-full font-label-md hover:bg-surface-container transition-colors">
+            <span class="material-symbols-outlined">arrow_back</span> السابق
+        </button>
+    </div>
+</div>
+
+<script>
+    // Slide Navigation
+    let currentSlide = 1;
+    const totalSlides = 8;
+
+    function showSlide(n) {
+        document.querySelectorAll('.slide').forEach(slide => {
+            slide.classList.remove('active');
+        });
+        document.getElementById('slide' + n).classList.add('active');
+        currentSlide = n;
+        window.scrollTo(0, 0);
+    }
+
+    function nextSlide() {
+        if (currentSlide < totalSlides) {
+            showSlide(currentSlide + 1);
+        }
+    }
+
+    function prevSlide() {
+        if (currentSlide > 1) {
+            showSlide(currentSlide - 1);
+        }
+    }
+
+    // تحفة الأطفال - Chapters and Verses
+    const chapters = {
+        'intro': {
+            title: 'المقدمة',
+            verses: [
+                { right: 'يَقُولُ رَاجِي رَحْمَةِ الْغَفُورِ', left: 'دَوْمًا سُلَيْمَانُ هُوَ الجَمْزُورِي' },
+                { right: 'الْحَمْدُ للَّهِ مُصَلِّيًا عَلَى', left: 'مُحَمَّدٍ وَآلِهِ وَمَنْ تَلَا' },
+                { right: 'وَبَعْدُ هَذَا النَّظْمُ لِلْمُرِيدِ', left: 'فِي النُّونِ والتَّنْوِينِ وَالْمُدُودِ' },
+                { right: 'سَمَّيْتُهُ بِتُحْفَةِ الأَطْفَالِ', left: 'عَنْ شَيْخِنَا الْمِيهِىِّ ذِي الْكَمَالِ' },
+                { right: 'أَرْجُو بِهِ أَنْ يَنْفَعَ الطُّلَّابَا', left: 'وَالأَجْرَ وَالْقَبُولَ وَالثَّوَابَا' }
+            ],
+            count: '١ - ٥'
+        },
+        'noon': {
+            title: 'أحكام النون الساكنة والتنوين',
+            verses: [
+                { right: 'أَحْكَامُ نُونٍ أَوْ تَنْوِينٍ أَرْبَعْ', left: 'إِذْ عَارِضٌ فِيهَا مِنَ الْأَحْرُفِ أَرْبَعْ' },
+                { right: 'فَالْأَوَّلُ الإِظْهَارُ قَبْلَ أَحْرُفٍ', left: 'لِلْحَلْقِ سِتَّةٌ رُتِبَتْ فَلْتَعْرِفِ' },
+                { right: 'هَمْزٌ فَهَاءٌ ثُمَّ عَيْنٌ حَاءُ', left: 'مُهْمَلَتَانِ ثُمَّ غَيْنٌ خَاءُ' },
+                { right: 'وَالثَّانِ قُرْبًا لِغُنَّةٍ يُدْرَكْ', left: 'عِنْدَ حُرُوفِ الْيَعْمَلُونَ تُشْرَكْ' },
+                { right: 'لِنُورِ لِينٍ ذِي ضِغَطٍ ظَلَمَا', left: 'زِدْ غُنَّةً مِثْلَ الَّذِي قَدْ عَلَمَا' }
+            ],
+            count: '٦ - ١٠'
+        },
+        'meem': {
+            title: 'أحكام الميم والنون المشددتين',
+            verses: [
+                { right: 'وَالثَّالِثُ الإِدْغَامُ بِالسِّتَّةِ بَقِي', left: 'مِنْ رُمَّةِ الْحُرُوفِ وَاحْفَظْ تَرْتِيبِي' },
+                { right: 'يَرْمَلُونَهُمْ ذَكَرَهُ الذَّي نَالَا', left: 'وَاحْذَرْ مِنَ التَّفَشِّيِ وَالإِطَالَةِ' },
+                { right: 'وَالرَّابِعُ الإِقْلاَبُ عِنْدَ الْبَاءِ', left: 'مِنْ غَيْرِ مَا نُطْقٍ بِغُنَّةٍ جَاءَ' },
+                { right: 'وَالْمِيمُ إِنْ تَسْكُنْ تَجِي قَبْلَ الْهَجَا', left: 'مِنْ أَحْرُفِ الثَّلَاثَةِ الْمُتَبَقِّيَةْ' },
+                { right: 'فَأَخْفِهَا لَدَى بَاءٍ بِغُنَّةٍ', left: 'وَأَظْهِرَنَّ غَيْرَهَا وَأَشْمِمَنْ' }
+            ],
+            count: '١١ - ١٥'
+        },
+        'meem_sakin': {
+            title: 'أحكام الميم الساكنة',
+            verses: [
+                { right: 'وَالْمِيمُ إِنْ تَسْكُنْ تَجِي قَبْلَ الْهَجَا', left: 'مِنْ أَحْرُفِ الثَّلَاثَةِ الْمُتَبَقِّيَةْ' },
+                { right: 'فَأَخْفِهَا لَدَى بَاءٍ بِغُنَّةٍ', left: 'وَأَظْهِرَنَّ غَيْرَهَا وَأَشْمِمَنْ' },
+                { right: 'وَاحْذَرْ مِنَ الإِدْغَامِ فِيهِمَا مَعًا', left: 'إِذْ لَا يَصِحُّ عِنْدَ ذَوِي الْعِلْمِ مَعًا' },
+                { right: 'وَالنُّونُ إِنْ تُشَدَّدْ فَحُكْمٌ وَاحِدُ', left: 'إِظْهَارُ غُنَّةٍ لِكُلٍّ وَاجِبُ' },
+                { right: 'مِنْ غَيْرِ مَا تَطْوِيلٍ أَوْ تَمَكُّثِ', left: 'بَلْ بِغُنَّةٍ وَسَطَهَا قَدْ ثَبَتَا' }
+            ],
+            count: '١٦ - ٢٠'
+        },
+        'lam': {
+            title: 'حكم لام أل ولام الفعل',
+            verses: [
+                { right: 'وَلَامُ أَلْ إِنْ قَبْلَهَا تَجِي لَامُ', left: 'أَوْ رَاءُ كُنْ مُدْغِمًا وَلَا تَلُمْ' },
+                { right: 'وَلَامُ فِعْلٍ قَبْلَ لَامٍ أُخْرَى', left: 'أَوْ رَاءُ أَوْ نُونٌ فَفِيهِ غُنَّةٌ' },
+                { right: 'وَاللَّامُ إِنْ تَسْكُنْ وَبَعْدَهَا أَتَى', left: 'حَرْفٌ مِنَ الْأَحْرُفِ فَافْهَمْ مَا بَقَى' },
+                { right: 'أَحْرُفُ الِاسْتِعْلَاءِ سَبْعَةٌ عُلَتْ', left: 'خَصَّ ضَغْطٍ قِظْ ظَلَمَا وَارْتَفَعَتْ' },
+                { right: 'وَاللَّامُ تُظْهَرُ قَبْلَ كُلِّ هَاجِ', left: 'مَا عَدَا مَا قَدْ مَضَى مِنَ الْأَحْرُفِ' }
+            ],
+            count: '٢١ - ٢٥'
+        }
+    };
+
+    function selectChapter(chapterKey) {
+        const chapter = chapters[chapterKey];
+        document.getElementById('chapter-title').textContent = chapter.title;
+        
+        // Update buttons
+        document.querySelectorAll('.chapter-btn').forEach(btn => {
+            btn.classList.remove('bg-primary-container', 'text-on-primary-container');
+            btn.classList.add('bg-surface-container-lowest', 'text-on-surface-variant');
+        });
+        event.target.classList.remove('bg-surface-container-lowest', 'text-on-surface-variant');
+        event.target.classList.add('bg-primary-container', 'text-on-primary-container');
+        
+        // Load verses
+        const container = document.getElementById('verses-container');
+        container.innerHTML = '';
+        chapter.verses.forEach(verse => {
+            const div = document.createElement('div');
+            div.className = 'flex flex-row-reverse justify-between items-center group hover:bg-secondary/5 rounded-lg p-2 transition-colors';
+            div.innerHTML = `
+                <div class="w-[45%] text-left">${verse.left}</div>
+                <div class="w-[10%] text-center verse-separator flex justify-center items-center"></div>
+                <div class="w-[45%] text-right">${verse.right}</div>
+            `;
+            container.appendChild(div);
+        });
+        
+        document.getElementById('verse-counter').textContent = `الآيات ${chapter.count} من ٦١`;
+    }
+
+    // Initialize first chapter
+    selectChapter('intro');
+
+    // تحدي الكلمات - Word Selection
+    const words = [
+        'سَأَلَ', 'دَرَسَ', 'كَتَبَ', 'قَرَأَ', 'جَلَسَ', 'ذَهَبَ', 'رَسَمَ', 'لَعِبَ',
+        'فَهِمَ', 'عَلِمَ', 'شَرِبَ', 'أَكَلَ', 'نَظَرَ', 'سَمِعَ', 'ضَحِكَ', 'بَكَى',
+        'قَامَ', 'نَامَ', 'مَشَى', 'رَكَضَ', 'طَارَ', 'سَبَحَ', 'قَفَزَ', 'صَعِدَ',
+        'نَزَلَ', 'دَخَلَ', 'خَرَجَ', 'فَتَحَ', 'غَلَقَ', 'أَخَذَ', 'أَعْطَى', 'قَالَ',
+        'سَأَلَ', 'عَمِلَ', 'صَنَعَ', 'زَرَعَ', 'حَصَدَ', 'طَبَخَ', 'غَسَلَ', 'كَنَسَ',
+        'رَتَّبَ', 'نَظَّفَ', 'غَيَّرَ', 'بَدَّلَ', 'أَصْلَحَ', 'كَسَرَ', 'رَكَّبَ', 'فَكَّ',
+        'لَوَّنَ', 'قَصَّ', 'لَصَقَ', 'رَبَطَ', 'فَكَّ', 'جَمَعَ', 'فَرَّقَ', 'قَسَّمَ',
+        'وَزَّنَ', 'كِالَ', 'عَدَّ', 'حَسَبَ', 'قَاسَ', 'قَدَّرَ', 'حَدَّدَ', 'عَيَّنَ',
+        'اخْتَارَ', 'قَرَّرَ', 'حَكَمَ', 'قَضَى', 'أَمَرَ', 'نَهَى', 'نَصَحَ', 'إِرْشَادَ',
+        'عَلَّمَ', 'تَعَلَّمَ', 'دَرَّسَ', 'شَرَحَ', 'فَسَّرَ', 'بَيَّنَ', 'وَضَّحَ', 'أَوْضَحَ',
+        'ذَكَرَ', 'نَسِيَ', 'تَذَكَّرَ', 'تَخَيَّلَ', 'حَلُمَ', 'فَكَّرَ', 'تَدَبَّرَ', 'تَفَكَّرَ',
+        'أَحَبَّ', 'كَرِهَ', 'رَغِبَ', 'رَهِبَ', 'خَافَ', 'أَمِنَ', 'حَزِنَ', 'فَرِحَ',
+        'تَعَجَّبَ', 'إِسْتَفْهَمَ', 'إِسْتَفْسَرَ', 'إِسْتَشَارَ', 'إِسْتَغْفَرَ', 'إِسْتَغَاثَ', 'إِسْتَنْجَدَ', 'إِسْتَعَانَ',
+        'إِسْتَطَاعَ', 'إِسْتَمَرَّ', 'إِسْتَقَلَّ', 'إِسْتَقَامَ', 'إِسْتَقْبَلَ', 'إِسْتَدْبَرَ', 'إِسْتَعْرَضَ', 'إِسْتَعْمَلَ',
+        'إِسْتَخْدَمَ', 'إِسْتَبْدَلَ', 'إِسْتَحْسَنَ', 'إِسْتَقْبَحَ', 'إِسْتَصْغَرَ', 'إِسْتَكْبَرَ', 'إِسْتَضْعَفَ', 'إِسْتَقْوَى',
+        'إِسْتَحْيَا', 'إِسْتَحْسَنَ', 'إِسْتَقْبَحَ', 'إِسْتَمْتَعَ', 'إِسْتَوْحَشَ', 'إِسْتَأْنَسَ', 'إِسْتَوْثَقَ', 'إِسْتَحْمَدَ',
+        'إِسْتَنْكَرَ', 'إِسْتَنْكَفَ', 'إِسْتَسْلَمَ', 'إِسْتَشْهَدَ', 'إِسْتَنْصَرَ', 'إِسْتَغْلَبَ', 'إِسْتَفَازَ', 'إِسْتَفَادَ',
+        'إِسْتَجَابَ', 'إِسْتَدْعَى', 'إِسْتَنْفَرَ', 'إِسْتَجْمَعَ', 'إِسْتَوْفَى', 'إِسْتَوْعَبَ', 'إِسْتَحَاطَ', 'إِسْتَدَارَ',
+        'إِسْتَقْرَبَ', 'إِسْتَبْعَدَ', 'إِسْتَعْجَلَ', 'إِسْتَأْجَلَ', 'إِسْتَبْطَأَ', 'إِسْتَعْظَمَ', 'إِسْتَصْغَرَ', 'إِسْتَهَانَ'
+    ];
+
+    let usedWords = [];
+
+    function selectWord() {
+        // Reset if all words used
+        if (usedWords.length >= words.length) {
+            usedWords = [];
+        }
+
+        // Select a random word not used yet
+        let availableWords = words.filter(w => !usedWords.includes(w));
+        let randomIndex = Math.floor(Math.random() * availableWords.length);
+        let selectedWord = availableWords[randomIndex];
+        usedWords.push(selectedWord);
+
+        // Animate floating words
+        animateFloatingWords();
+
+        // Update display with animation
+        const wordElement = document.getElementById('current-word');
+        wordElement.classList.remove('word-animation');
+        void wordElement.offsetWidth; // Trigger reflow
+        wordElement.textContent = selectedWord;
+        wordElement.classList.add('word-animation');
+    }
+
+    function resetSelection() {
+        usedWords = [];
+        selectWord();
+    }
+
+    function animateFloatingWords() {
+        const container = document.getElementById('floating-words');
+        container.innerHTML = '';
+        
+        // Create 10-15 floating words
+        const numWords = Math.floor(Math.random() * 6) + 10;
+        for (let i = 0; i < numWords; i++) {
+            const word = document.createElement('div');
+            word.className = 'floating-word';
+            word.textContent = words[Math.floor(Math.random() * words.length)];
+            word.style.left = Math.random() * 100 + '%';
+            word.style.top = Math.random() * 100 + '%';
+            word.style.animationDelay = Math.random() * 2 + 's';
+            word.style.fontSize = (Math.random() * 20 + 20) + 'px';
+            container.appendChild(word);
+        }
+
+        // Clear after animation
+        setTimeout(() => {
+            container.innerHTML = '';
+        }, 3000);
+    }
+
+    // Initialize first word
+    selectWord();
+</script>
+
+</body>
+</html>
