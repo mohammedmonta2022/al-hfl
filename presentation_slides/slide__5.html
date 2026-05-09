@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Noor Al-Bayan - Word Challenge</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600;700&amp;family=Source+Sans+3:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "on-tertiary-container": "#c6c4bc",
+                "primary-container": "#045d3f",
+                "on-tertiary": "#ffffff",
+                "on-secondary-container": "#785a1a",
+                "tertiary-fixed-dim": "#c9c6bf",
+                "on-secondary-fixed-variant": "#5d4201",
+                "outline": "#6f7972",
+                "primary": "#00432c",
+                "surface-tint": "#1c6b4c",
+                "surface-dim": "#e1d8d4",
+                "surface-container-lowest": "#ffffff",
+                "inverse-primary": "#8bd6b0",
+                "tertiary-fixed": "#e5e2db",
+                "on-primary-fixed": "#002114",
+                "surface-container": "#f5ece7",
+                "tertiary-container": "#52514b",
+                "on-tertiary-fixed": "#1c1c17",
+                "on-primary": "#ffffff",
+                "on-background": "#1e1b18",
+                "outline-variant": "#bfc9c1",
+                "background": "#fff8f5",
+                "surface-bright": "#fff8f5",
+                "inverse-on-surface": "#f8efea",
+                "on-secondary-fixed": "#261900",
+                "on-primary-fixed-variant": "#005236",
+                "tertiary": "#3a3a35",
+                "secondary": "#775a19",
+                "on-surface-variant": "#3f4943",
+                "primary-fixed": "#a6f3cb",
+                "secondary-fixed-dim": "#e9c176",
+                "on-error": "#ffffff",
+                "secondary-fixed": "#ffdea5",
+                "on-secondary": "#ffffff",
+                "inverse-surface": "#34302c",
+                "on-primary-container": "#89d4ad",
+                "surface-container-highest": "#e9e1dc",
+                "error-container": "#ffdad6",
+                "on-surface": "#1e1b18",
+                "on-error-container": "#93000a",
+                "surface-variant": "#e9e1dc",
+                "on-tertiary-fixed-variant": "#474741",
+                "surface-container-low": "#fbf2ed",
+                "surface": "#fff8f5",
+                "primary-fixed-dim": "#8bd6b0",
+                "secondary-container": "#fed488",
+                "error": "#ba1a1a",
+                "surface-container-high": "#efe6e2"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+        },
+        "spacing": {
+                "unit": "8px",
+                "gutter": "24px",
+                "margin-desktop": "64px",
+                "max-width": "1200px",
+                "margin-mobile": "16px"
+        },
+        "fontFamily": {
+                "display-lg": [
+                        "EB Garamond"
+                ],
+                "body-lg": [
+                        "Source Sans 3"
+                ],
+                "display-lg-mobile": [
+                        "EB Garamond"
+                ],
+                "headline-md": [
+                        "EB Garamond"
+                ],
+                "body-md": [
+                        "Source Sans 3"
+                ],
+                "headline-sm": [
+                        "EB Garamond"
+                ],
+                "label-md": [
+                        "Source Sans 3"
+                ]
+        },
+        "fontSize": {
+                "display-lg": [
+                        "48px",
+                        {
+                                "lineHeight": "56px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "body-lg": [
+                        "18px",
+                        {
+                                "lineHeight": "28px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "display-lg-mobile": [
+                        "32px",
+                        {
+                                "lineHeight": "40px",
+                                "fontWeight": "700"
+                        }
+                ],
+                "headline-md": [
+                        "32px",
+                        {
+                                "lineHeight": "40px",
+                                "fontWeight": "600"
+                        }
+                ],
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "24px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "headline-sm": [
+                        "24px",
+                        {
+                                "lineHeight": "32px",
+                                "fontWeight": "600"
+                        }
+                ],
+                "label-md": [
+                        "14px",
+                        {
+                                "lineHeight": "20px",
+                                "letterSpacing": "0.05em",
+                                "fontWeight": "600"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+<style>
+    .gold-accent { border-color: rgba(197, 160, 89, 0.3); }
+    .shadow-ambient { box-shadow: 0 10px 20px rgba(4, 93, 63, 0.1); }
+</style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+<!-- Top Navigation Bar (Mobile) -->
+<nav class="md:hidden fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile h-16 border-b border-secondary/30 bg-surface shadow-sm shadow-primary/10">
+<div class="font-display-lg text-headline-md font-bold text-primary">Noor Al-Bayan</div>
+<div class="flex items-center gap-4 text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">menu</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">account_circle</span>
+</div>
+</nav>
+<!-- Side Navigation Bar (Desktop) -->
+<aside class="hidden lg:flex flex-col h-screen fixed right-0 top-0 pt-20 pb-8 z-40 w-80 border-l border-secondary/20 bg-surface-container-low shadow-xl shadow-primary/5">
+<div class="px-8 mb-8 text-right">
+<h1 class="font-display-lg text-headline-sm text-primary mb-2">Noor Al-Bayan</h1>
+<p class="font-body-md text-on-surface-variant">Eloquence and Light</p>
+</div>
+<nav class="flex-1 flex flex-col gap-2 px-2">
+<a class="flex items-center gap-4 text-on-surface-variant hover:bg-secondary-container/30 rounded-full px-4 py-3 mx-2 transition-all duration-300" href="#">
+<span class="material-symbols-outlined">auto_stories</span>
+<span class="font-body-md text-body-md">Farewell to Rote Learning</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface-variant hover:bg-secondary-container/30 rounded-full px-4 py-3 mx-2 transition-all duration-300" href="#">
+<span class="material-symbols-outlined">auto_awesome</span>
+<span class="font-body-md text-body-md">Qur'anic Excellence</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface-variant hover:bg-secondary-container/30 rounded-full px-4 py-3 mx-2 transition-all duration-300" href="#">
+<span class="material-symbols-outlined">menu_book</span>
+<span class="font-body-md text-body-md">Noor Al-Bayan Books</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface-variant hover:bg-secondary-container/30 rounded-full px-4 py-3 mx-2 transition-all duration-300" href="#">
+<span class="material-symbols-outlined">translate</span>
+<span class="font-body-md text-body-md">Language of Paradise</span>
+</a>
+<a class="flex items-center gap-4 bg-primary-container text-on-primary-container rounded-full px-4 py-3 mx-2 transition-transform duration-300 translate-x-[-4px]" href="#">
+<span class="material-symbols-outlined">quiz</span>
+<span class="font-body-md text-body-md">Word Challenge</span>
+</a>
+</nav>
+<div class="px-6 mt-auto">
+<button class="w-full bg-primary text-secondary-container font-label-md py-3 rounded-full hover:bg-primary-fixed-variant transition-colors shadow-ambient">Start Daily Lesson</button>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 lg:pr-80 pt-20 lg:pt-8 px-margin-mobile lg:px-margin-desktop pb-12 flex flex-col items-center justify-center min-h-screen">
+<!-- Challenge Header -->
+<header class="text-center mb-12 max-w-2xl w-full">
+<h2 class="font-display-lg text-display-lg text-primary mb-4">تحدي الكلمات</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">اختبر قراءتك للكلمات الثلاثية بحركة الفتح. اضغط على الزر لظهور كلمة جديدة.</p>
+</header>
+<!-- Interactive Central Display -->
+<div class="relative w-full max-w-3xl aspect-[16/9] md:aspect-[2/1] bg-surface-container-lowest border border-secondary/30 rounded-xl shadow-ambient mb-12 flex items-center justify-center overflow-hidden">
+<!-- Arabesque Watermark -->
+<div class="absolute inset-0 opacity-5 pointer-events-none" data-alt="A subtle, elegant Islamic geometric pattern acting as a watermark background. The pattern uses intricate intersecting lines typical of classical arabesque art. It is rendered in a very light, almost invisible ivory tone against a slightly warmer cream background, providing texture without distracting from the main content." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAYTKF7OecYoXs31_jR98sOQHZdkeypnFZdKV7tOZn6zcqLYG3bCkHE9IPXjsRCzpDEqTXpAddS0Q9DrZn6Q7Zh7kOoU2T2spXFPNeIR-p7L2DsSSg7LoBqob3m7v_EBGX7YW1w_PBIdu5RUM7ExoaRiVx72J12I89AjTgqElLw7GDu6GTRJHoQy_2pBCyAHyiGbD5ksK3gy_RrmEGCme5Kf9TkrdGU0HXLUNdU9C1vG7jMe3xykK3OQXoe5u9WWcmX4TyuT2wWjJYz'); background-size: cover; background-position: center;"></div>
+<!-- Word Display Area -->
+<div class="relative z-10 text-center transform scale-100 transition-transform duration-500">
+<!-- Simulated Animation Frame -->
+<div class="font-display-lg text-[120px] md:text-[160px] text-primary leading-none tracking-wider opacity-100 transition-opacity duration-500" dir="rtl">
+                سَأَلَ
+            </div>
+<!-- Progress Indicator below word -->
+<div class="mt-8 flex justify-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="w-2 h-2 rounded-full bg-primary-container/30"></span>
+<span class="w-2 h-2 rounded-full bg-primary-container/30"></span>
+</div>
+</div>
+</div>
+<!-- Controls -->
+<div class="flex flex-col sm:flex-row gap-6 w-full max-w-xl justify-center">
+<!-- Primary Action -->
+<button class="flex-1 flex items-center justify-center gap-3 bg-primary text-secondary-container hover:bg-primary-fixed-variant transition-colors duration-300 py-6 px-8 rounded-full shadow-ambient group">
+<span class="material-symbols-outlined text-3xl group-hover:rotate-180 transition-transform duration-500">refresh</span>
+<span class="font-headline-md text-headline-sm">اختر كلمة</span>
+</button>
+<!-- Supervisor Action (Re-roll/Next) -->
+<button class="flex-1 flex items-center justify-center gap-3 bg-surface-container-low text-primary border border-secondary/30 hover:bg-secondary-container/20 transition-colors duration-300 py-6 px-8 rounded-full">
+<span class="material-symbols-outlined text-2xl">skip_next</span>
+<span class="font-headline-sm text-headline-sm">التالي للمشرف</span>
+</button>
+</div>
+<!-- Word Pool Indicator (Simulated) -->
+<div class="mt-16 w-full max-w-4xl text-center">
+<div class="inline-flex items-center gap-2 px-4 py-2 bg-surface-variant rounded-full text-on-surface-variant font-label-md">
+<span class="material-symbols-outlined text-sm">library_books</span>
+<span>مخزون الكلمات: ١٢٠ كلمة ثلاثية بـ الفتح</span>
+</div>
+<!-- Bento Grid Preview of upcoming/past words (decorative) -->
+<div class="mt-8 grid grid-cols-3 md:grid-cols-6 gap-4 opacity-50">
+<div class="bg-surface-container p-4 rounded-lg border border-secondary/10 font-display-lg text-headline-sm text-center">دَرَسَ</div>
+<div class="bg-surface-container p-4 rounded-lg border border-secondary/10 font-display-lg text-headline-sm text-center">كَتَبَ</div>
+<div class="bg-surface-container p-4 rounded-lg border border-secondary/10 font-display-lg text-headline-sm text-center">قَرَأَ</div>
+<div class="bg-surface-container p-4 rounded-lg border border-secondary/10 font-display-lg text-headline-sm text-center hidden md:block">جَلَسَ</div>
+<div class="bg-surface-container p-4 rounded-lg border border-secondary/10 font-display-lg text-headline-sm text-center hidden md:block">ذَهَبَ</div>
+<div class="bg-surface-container p-4 rounded-lg border border-secondary/10 font-display-lg text-headline-sm text-center hidden md:block">رَسَمَ</div>
+</div>
+</div>
+</main>
+</body></html>

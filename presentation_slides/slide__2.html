@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>مشروع أجود قرآني - متن تحفة الأطفال</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-tertiary-container": "#c6c4bc",
+                      "primary-container": "#045d3f",
+                      "on-tertiary": "#ffffff",
+                      "on-secondary-container": "#785a1a",
+                      "tertiary-fixed-dim": "#c9c6bf",
+                      "on-secondary-fixed-variant": "#5d4201",
+                      "outline": "#6f7972",
+                      "primary": "#00432c",
+                      "surface-tint": "#1c6b4c",
+                      "surface-dim": "#e1d8d4",
+                      "surface-container-lowest": "#ffffff",
+                      "inverse-primary": "#8bd6b0",
+                      "tertiary-fixed": "#e5e2db",
+                      "on-primary-fixed": "#002114",
+                      "surface-container": "#f5ece7",
+                      "tertiary-container": "#52514b",
+                      "on-tertiary-fixed": "#1c1c17",
+                      "on-primary": "#ffffff",
+                      "on-background": "#1e1b18",
+                      "outline-variant": "#bfc9c1",
+                      "background": "#fff8f5",
+                      "surface-bright": "#fff8f5",
+                      "inverse-on-surface": "#f8efea",
+                      "on-secondary-fixed": "#261900",
+                      "on-primary-fixed-variant": "#005236",
+                      "tertiary": "#3a3a35",
+                      "secondary": "#775a19",
+                      "on-surface-variant": "#3f4943",
+                      "primary-fixed": "#a6f3cb",
+                      "secondary-fixed-dim": "#e9c176",
+                      "on-error": "#ffffff",
+                      "secondary-fixed": "#ffdea5",
+                      "on-secondary": "#ffffff",
+                      "inverse-surface": "#34302c",
+                      "on-primary-container": "#89d4ad",
+                      "surface-container-highest": "#e9e1dc",
+                      "error-container": "#ffdad6",
+                      "on-surface": "#1e1b18",
+                      "on-error-container": "#93000a",
+                      "surface-variant": "#e9e1dc",
+                      "on-tertiary-fixed-variant": "#474741",
+                      "surface-container-low": "#fbf2ed",
+                      "surface": "#fff8f5",
+                      "primary-fixed-dim": "#8bd6b0",
+                      "secondary-container": "#fed488",
+                      "error": "#ba1a1a",
+                      "surface-container-high": "#efe6e2"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "unit": "8px",
+                      "gutter": "24px",
+                      "margin-desktop": "64px",
+                      "max-width": "1200px",
+                      "margin-mobile": "16px"
+              },
+              "fontFamily": {
+                      "display-lg": [
+                              "EB Garamond", "serif"
+                      ],
+                      "body-lg": [
+                              "Source Sans 3", "sans-serif"
+                      ],
+                      "display-lg-mobile": [
+                              "EB Garamond", "serif"
+                      ],
+                      "headline-md": [
+                              "EB Garamond", "serif"
+                      ],
+                      "body-md": [
+                              "Source Sans 3", "sans-serif"
+                      ],
+                      "headline-sm": [
+                              "EB Garamond", "serif"
+                      ],
+                      "label-md": [
+                              "Source Sans 3", "sans-serif"
+                      ]
+              },
+              "fontSize": {
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg-mobile": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-sm": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+            },
+          }
+        }
+    </script>
+<style>
+        /* Traditional Arabic specific tweaks to align with the provided token intent */
+        .arabic-text {
+            font-family: 'Amiri', 'Traditional Arabic', serif; /* Fallback for authentic look, guided by the display tokens */
+            line-height: 2.2;
+        }
+        
+        .ornamental-border {
+            border: 2px solid transparent;
+            border-image: linear-gradient(to bottom right, #775a19, #e9c176, #775a19) 1;
+            padding: 24px;
+            position: relative;
+        }
+        
+        .ornamental-border::before {
+            content: "";
+            position: absolute;
+            top: 6px; left: 6px; right: 6px; bottom: 6px;
+            border: 1px solid rgba(119, 90, 25, 0.4);
+            pointer-events: none;
+        }
+        
+        .verse-separator::after {
+            content: "❁";
+            color: #775a19;
+            font-size: 1.2rem;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md flex h-screen overflow-hidden" dir="ltr">
+<!-- SideNavBar (Docked Left as per JSON, despite RTL content) -->
+<nav class="hidden lg:flex flex-col h-screen fixed left-0 top-0 pt-20 pb-8 z-40 bg-surface-container dark:bg-surface-container-high docked left-0 w-80 border-r border-secondary/20 bg-surface-container-low dark:bg-surface-container-highest shadow-xl shadow-primary/5">
+<div class="px-6 mb-10 text-center">
+<h1 class="font-display-lg text-headline-sm text-primary dark:text-primary-fixed">Noor Al-Bayan</h1>
+<p class="font-body-md text-body-md text-secondary mt-2">Eloquence and Light</p>
+</div>
+<div class="flex-1 overflow-y-auto px-4 space-y-2">
+<a class="flex items-center gap-4 text-on-surface-variant hover:bg-secondary-container/30 rounded-full px-4 py-3 mx-2 hover:bg-secondary-container/40 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">auto_stories</span>
+<span class="font-body-md text-body-md">Farewell to Rote Learning</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface-variant hover:bg-secondary-container/30 rounded-full px-4 py-3 mx-2 hover:bg-secondary-container/40 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">auto_awesome</span>
+<span class="font-body-md text-body-md">Qur'anic Excellence</span>
+</a>
+<!-- Active State -->
+<a class="flex items-center gap-4 bg-primary-container text-on-primary-container rounded-full px-4 py-3 mx-2 translate-x-1 transition-transform duration-300 shadow-sm shadow-primary/10" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">menu_book</span>
+<span class="font-body-md text-body-md font-bold">Noor Al-Bayan Books</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface-variant hover:bg-secondary-container/30 rounded-full px-4 py-3 mx-2 hover:bg-secondary-container/40 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">translate</span>
+<span class="font-body-md text-body-md">Language of Paradise</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface-variant hover:bg-secondary-container/30 rounded-full px-4 py-3 mx-2 hover:bg-secondary-container/40 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">quiz</span>
+<span class="font-body-md text-body-md">Word Challenge</span>
+</a>
+</div>
+<div class="px-6 mt-auto">
+<button class="w-full bg-primary text-on-primary font-label-md text-label-md py-3 rounded-full hover:bg-surface-tint transition-colors shadow-sm shadow-primary/20">
+                Start Daily Lesson
+            </button>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="flex-1 ml-0 lg:ml-80 h-full overflow-y-auto relative" dir="rtl">
+<!-- Ambient Background Pattern -->
+<div class="absolute inset-0 z-0 opacity-[0.03] pointer-events-none" data-alt="A subtle, high-key digital texture resembling ancient parchment or manuscript paper. The surface features very faint, elegant Islamic geometric patterns acting as a delicate watermark. The overall tone is a luminous ivory and cream, creating a serene, light-mode background suitable for sacred texts." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBNtuhRDyaQD6WMSdDpGTTmjCnHrONoOB9YwBn4FXXHr-0swxDTXV7GdyN7BOKAC2MPs_3ALC342-rdLK9ypTTOvCnCjD9i8s0lunKEtf2exakEB5_xA8l2dKDeL6J5h0d7jT9E3zHAYYpMRrQdZnCCHRs3uK0Drfxue6dOwjm2WNXueSS9fCuPqTSGtDqsodFltrv6OZu2qo4J2vNn7FKHDmm7KVZuyvSRwb0483jyZuS-t6WC96zFuNzeYTBMHKGH368ANPxEySRD'); background-size: cover; background-blend-mode: multiply;">
+</div>
+<div class="relative z-10 max-w-[1000px] mx-auto px-margin-mobile md:px-margin-desktop py-12">
+<!-- Header Section -->
+<header class="text-center mb-12">
+<p class="font-label-md text-label-md text-secondary tracking-widest mb-2 uppercase">مشروع أجود قرآني</p>
+<h2 class="font-display-lg text-display-lg text-primary mb-4 arabic-text">متن تحفة الأطفال</h2>
+<div class="flex items-center justify-center gap-4">
+<div class="h-[1px] w-16 bg-secondary/30"></div>
+<span class="material-symbols-outlined text-secondary text-sm">diamond</span>
+<div class="h-[1px] w-16 bg-secondary/30"></div>
+</div>
+</header>
+<!-- Chapter Selector (Bento-style Pills) -->
+<section class="mb-10">
+<div class="flex overflow-x-auto pb-4 gap-3 snap-x hide-scrollbar">
+<!-- Active Tab -->
+<button class="snap-center shrink-0 bg-primary-container text-on-primary-container border border-primary/20 rounded-full px-6 py-2 font-headline-sm text-body-md transition-all shadow-sm shadow-primary/10">
+                        المقدمة
+                    </button>
+<!-- Inactive Tabs -->
+<button class="snap-center shrink-0 bg-surface-container-lowest text-on-surface-variant border border-secondary/20 rounded-full px-6 py-2 font-headline-sm text-body-md hover:bg-secondary-container/20 transition-all">
+                        أحكام النون الساكنة والتنوين
+                    </button>
+<button class="snap-center shrink-0 bg-surface-container-lowest text-on-surface-variant border border-secondary/20 rounded-full px-6 py-2 font-headline-sm text-body-md hover:bg-secondary-container/20 transition-all">
+                        أحكام الميم والنون المشددتين
+                    </button>
+<button class="snap-center shrink-0 bg-surface-container-lowest text-on-surface-variant border border-secondary/20 rounded-full px-6 py-2 font-headline-sm text-body-md hover:bg-secondary-container/20 transition-all">
+                        أحكام الميم الساكنة
+                    </button>
+<button class="snap-center shrink-0 bg-surface-container-lowest text-on-surface-variant border border-secondary/20 rounded-full px-6 py-2 font-headline-sm text-body-md hover:bg-secondary-container/20 transition-all">
+                        حكم لام أل ولام الفعل
+                    </button>
+</div>
+</section>
+<!-- The Text Container (Parchment Card) -->
+<article class="bg-surface-container-lowest rounded-xl shadow-xl shadow-primary/5 overflow-hidden">
+<div class="ornamental-border bg-[#FDFBF7]">
+<div class="text-center mb-10 mt-4">
+<h3 class="inline-block font-display-lg text-headline-md text-primary-fixed-variant border-b-2 border-secondary/40 pb-2 px-8 arabic-text">
+                            المقدمة
+                        </h3>
+</div>
+<!-- Dual Column Poetry Layout -->
+<div class="space-y-6 px-4 md:px-12 font-headline-sm text-headline-sm text-on-surface arabic-text">
+<!-- Verse 1 -->
+<div class="flex flex-row-reverse justify-between items-center group hover:bg-secondary/5 rounded-lg p-2 transition-colors">
+<div class="w-[45%] text-left">
+                                يَقُولُ رَاجِي رَحْمَةِ الْغَفُورِ
+                            </div>
+<div class="w-[10%] text-center verse-separator flex justify-center items-center">
+<!-- decorative pseudo element handled in CSS -->
+</div>
+<div class="w-[45%] text-right">
+                                دَوْمًا سُلَيْمَانُ هُوَ الجَمْزُورِي
+                            </div>
+</div>
+<!-- Verse 2 -->
+<div class="flex flex-row-reverse justify-between items-center group hover:bg-secondary/5 rounded-lg p-2 transition-colors">
+<div class="w-[45%] text-left">
+                                الْحَمْدُ للَّهِ مُصَلِّيًا عَلَى
+                            </div>
+<div class="w-[10%] text-center verse-separator flex justify-center items-center"></div>
+<div class="w-[45%] text-right">
+                                مُحَمَّدٍ وَآلِهِ وَمَنْ تَلَا
+                            </div>
+</div>
+<!-- Verse 3 -->
+<div class="flex flex-row-reverse justify-between items-center group hover:bg-secondary/5 rounded-lg p-2 transition-colors">
+<div class="w-[45%] text-left">
+                                وَبَعْدُ هَذَا النَّظْمُ لِلْمُرِيدِ
+                            </div>
+<div class="w-[10%] text-center verse-separator flex justify-center items-center"></div>
+<div class="w-[45%] text-right">
+                                فِي النُّونِ والتَّنْوِينِ وَالْمُدُودِ
+                            </div>
+</div>
+<!-- Verse 4 -->
+<div class="flex flex-row-reverse justify-between items-center group hover:bg-secondary/5 rounded-lg p-2 transition-colors">
+<div class="w-[45%] text-left">
+                                سَمَّيْتُهُ بِتُحْفَةِ الأَطْفَالِ
+                            </div>
+<div class="w-[10%] text-center verse-separator flex justify-center items-center"></div>
+<div class="w-[45%] text-right">
+                                عَنْ شَيْخِنَا الْمِيهِىِّ ذِي الْكَمَالِ
+                            </div>
+</div>
+<!-- Verse 5 -->
+<div class="flex flex-row-reverse justify-between items-center group hover:bg-secondary/5 rounded-lg p-2 transition-colors">
+<div class="w-[45%] text-left">
+                                أَرْجُو بِهِ أَنْ يَنْفَعَ الطُّلَّابَا
+                            </div>
+<div class="w-[10%] text-center verse-separator flex justify-center items-center"></div>
+<div class="w-[45%] text-right">
+                                وَالأَجْرَ وَالْقَبُولَ وَالثَّوَابَا
+                            </div>
+</div>
+</div>
+<div class="mt-12 flex justify-center">
+<span class="material-symbols-outlined text-secondary/40 text-4xl">local_florist</span>
+</div>
+</div>
+</article>
+<!-- Bottom Actions -->
+<div class="mt-8 flex justify-between items-center">
+<button class="flex items-center gap-2 text-primary font-label-md text-label-md hover:bg-primary-container/20 px-4 py-2 rounded-full transition-colors">
+<span class="material-symbols-outlined">arrow_forward</span>
+<span>الباب التالي</span>
+</button>
+<div class="text-on-surface-variant font-body-md text-sm">
+                    الآيات ١ - ٥ من ٦١
+                </div>
+<button class="flex items-center gap-2 text-on-surface-variant font-label-md text-label-md opacity-50 cursor-not-allowed px-4 py-2">
+<span>الباب السابق</span>
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+</div>
+</div>
+</main>
+</body></html>
